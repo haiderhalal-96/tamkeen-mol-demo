@@ -354,6 +354,38 @@ footer .sm{font-size:12px;margin-top:6px;opacity:.8}
 .static .reveal{transition:none!important;opacity:1!important;transform:none!important}
 .static #hero{min-height:auto!important}
 .static [style*="animation"],.static .phone,.static .mini-dash{animation:none!important}
+
+/* ERP */
+.flow{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:14px;align-items:stretch;margin:28px 0 30px}
+.flow .fb{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:22px 22px 18px;position:relative;overflow:hidden}
+.flow .fb::before{content:"";position:absolute;inset:0 0 auto 0;height:4px;background:var(--acc)}
+.flow .fb.f1{--acc:linear-gradient(90deg,#f0b541,#f7d27a)}.flow .fb.f2{--acc:linear-gradient(90deg,#7c6cf0,#b3a7ff)}.flow .fb.f3{--acc:linear-gradient(90deg,#0f7a5a,#4ad1a4)}
+.flow .fb small{display:block;color:var(--muted);font-size:12px;margin-bottom:6px}
+.flow .fb h3{font-size:20px;margin:0 0 8px}
+.flow .fb p{font-size:13.5px;color:var(--muted);margin:0 0 10px;line-height:1.7}
+.flow .fb .chips .chip{font-size:11.5px}
+.flow .fa{align-self:center;font-size:30px;color:#f0b541;font-weight:800}
+[dir=ltr] .flow .fa{transform:scaleX(-1)}
+.mods{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.mod{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px}
+.mod i{font-style:normal;font-size:26px;display:block;margin-bottom:8px}
+.mod b{display:block;font-size:15px;margin-bottom:6px}
+.mod span{font-size:12.5px;color:var(--muted);line-height:1.6;display:block}
+.arch{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:14px}
+.arch div{background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:14px;padding:14px 12px;text-align:center}
+.arch div i{font-style:normal;display:block;font-size:22px;font-weight:800;color:#4ad1a4;line-height:1;margin-bottom:6px}
+.arch div b{display:block;font-size:13.5px;margin-bottom:4px}.arch div span{font-size:11.5px;color:var(--muted);display:block;line-height:1.5}
+.onefile{margin-top:28px;background:linear-gradient(135deg,rgba(240,181,65,.12),rgba(15,122,90,.12));border:1px solid rgba(240,181,65,.35);border-radius:22px;padding:22px 26px;display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:center}
+.onefile i{font-style:normal;font-size:44px}
+.onefile b{display:block;font-size:19px;margin-bottom:4px}.onefile p{margin:0;color:var(--muted);font-size:14px}
+@media(max-width:900px){.flow{grid-template-columns:1fr}.flow .fa{transform:rotate(90deg);text-align:center}[dir=ltr] .flow .fa{transform:rotate(90deg) scaleX(-1)}.mods{grid-template-columns:1fr 1fr}.arch{grid-template-columns:1fr 1fr}.onefile{grid-template-columns:1fr}}
+.enjaz{display:flex;align-items:center;background:#fff;border-radius:10px;padding:4px 8px;margin-inline-start:auto;margin-inline-end:10px;flex:none}
+.enjaz img{height:26px;display:block}
+nav ul{margin-inline-start:auto}
+.fbrand{display:flex;align-items:center;justify-content:center;gap:14px;margin-bottom:14px}
+.fbrand img{height:40px}.fbrand .ez{background:#fff;border-radius:10px;padding:5px 9px;height:42px}
+.fbrand span{color:var(--muted);font-size:18px}
+@media(max-width:900px){.enjaz{display:none}}
 </style>
 </head>
 <body>
@@ -366,7 +398,9 @@ footer .sm{font-size:12px;margin-top:6px;opacity:.8}
       <li><a href="#calc" data-i18n="nav.calc">حاسبة الإيرادات</a></li>
       <li><a href="#compare" data-i18n="nav.compare">قبل / بعد</a></li>
       <li><a href="#services" data-i18n="nav.services">الخدمات</a></li>
+      <li><a href="#erp" data-i18n="nav.erp">ERP والأرشفة</a></li>
     </ul>
+    <a class="enjaz" href="#" title="إنجاز لتكنولوجيا المعلومات"><img src="enjaz.png" alt="enjaz"></a>
     <div class="lang" id="lang">
       <button data-lang="ar" class="on">ع</button><button data-lang="ku">کوردی</button><button data-lang="en">EN</button>
     </div>
@@ -564,8 +598,50 @@ footer .sm{font-size:12px;margin-top:6px;opacity:.8}
   </div>
 </section>
 
+
+<!-- ================= ERP & ARCHIVE ================= -->
+<section id="erp">
+  <div class="wrap">
+    <div class="eyebrow reveal">المنظومة المتكاملة</div>
+    <h2 class="reveal d1">تمكين ليست تطبيقاً فقط… <span class="grad">ERP وأرشفة إلكترونية خلف كل طلب</span></h2>
+    <p class="lead reveal d2">الطلب يدخل من تطبيق المواطن، يمشي داخل الوزارة على سير العمل ويتعامل مع المالية والموارد البشرية في الـERP، ويُحفظ تلقائياً في الأرشيف الإلكتروني بملف المستفيد الموحد. <b>ملف واحد، رحلة واحدة، بلا ورق.</b></p>
+
+    <div class="flow reveal d2">
+      <div class="fb f1"><small>1 · للمواطن والعامل</small><h3>الخدمات الإلكترونية والأتمتة</h3><p>تقديم إلكتروني، دفع، تتبع، إشعارات، هوية رقمية — ما شاهدته في الديمو الحي أعلاه.</p><div class="chips"><span class="chip">تطبيق الوزارة</span><span class="chip">دفع إلكتروني</span><span class="chip">تتبع لحظي</span></div></div>
+      <div class="fa">←</div>
+      <div class="fb f2"><small>2 · للموظف والإدارة</small><h3>منظومة إدارة الموارد ERP</h3><p>الموارد البشرية والرواتب، المالية والموازنة، المراسلات، اللجان، المخازن — كل الدوائر على نظام واحد يتكلم مع بعضه.</p><div class="chips"><span class="chip">صادر ووارد</span><span class="chip">رواتب</span><span class="chip">موازنة</span><span class="chip">لجان</span></div></div>
+      <div class="fa">←</div>
+      <div class="fb f3"><small>3 · ذاكرة الوزارة</small><h3>الأرشفة والوثائق الإلكترونية</h3><p>مسح الملفات القديمة وفهرستها، وأرشفة تلقائية لكل طلب جديد — ملف موحد لكل مستفيد قابل للبحث بثوانٍ.</p><div class="chips"><span class="chip">OCR عربي</span><span class="chip">ملف موحد</span><span class="chip">بحث فوري</span></div></div>
+    </div>
+
+    <h3 class="reveal" style="font-size:22px;margin:0 0 14px">وحدات الـERP المقترحة للوزارة</h3>
+    <div class="mods reveal d1">
+      <div class="mod"><i>👥</i><b>الموارد البشرية والرواتب</b><span>الملاك، الملف الوظيفي، الإجازات، الترفيعات، الحضور، الرواتب والاستقطاعات لكل دوائر الوزارة والمحافظات.</span></div>
+      <div class="mod"><i>💵</i><b>المالية والموازنة</b><span>الموازنة، الصرف، الإيرادات (ومنها رسوم تمكين تلقائياً)، القيود، الحسابات الختامية، الربط مع المصرف.</span></div>
+      <div class="mod"><i>📨</i><b>المراسلات – الصادر والوارد</b><span>تسجيل الكتب، التوجيه الإلكتروني، الهوامش، المتابعة، الأرشفة التلقائية. الكتاب يوصل بدقائق لا أيام.</span></div>
+      <div class="mod"><i>🏛️</i><b>اللجان والقرارات</b><span>لجان الشمول ولجان القروض واللجان الطبية: جدول الأعمال، المحاضر، متابعة تنفيذ القرارات.</span></div>
+      <div class="mod"><i>🛒</i><b>المشتريات والعقود</b><span>طلبات الشراء، لجان المشتريات، العقود، المستخلصات — شفافية كاملة ومنع التجاوز.</span></div>
+      <div class="mod"><i>📦</i><b>المخازن والأصول</b><span>الإدخال والإخراج، الجرد، الأصول الثابتة والإهلاك، أجهزة مراكز التدريب ودور الرعاية.</span></div>
+      <div class="mod"><i>⚖️</i><b>الشؤون القانونية</b><span>القضايا والنزاعات العمالية، العقود، الآراء القانونية، المواعيد القضائية بلا تفويت.</span></div>
+      <div class="mod"><i>📊</i><b>لوحة قيادة الوزير</b><span>تقارير موحدة عبر كل الوحدات والدوائر والمحافظات — صورة كاملة بضغطة زر.</span></div>
+    </div>
+
+    <h3 class="reveal" style="font-size:22px;margin:30px 0 4px">مشروع الأرشفة – كيف ننفذه</h3>
+    <div class="arch reveal d1">
+      <div><i>1</i><b>حصر وتهيئة</b><span>جرد الملفات القديمة، ترميز، معالجة التالف، محاضر تسليم</span></div>
+      <div><i>2</i><b>مسح ضوئي</b><span>دقة عالية + OCR عربي لجعل النص قابلاً للبحث</span></div>
+      <div><i>3</i><b>فهرسة</b><span>بيانات وصفية لكل وثيقة وفق دليل تصنيف الوزارة</span></div>
+      <div><i>4</i><b>تدقيق ومصادقة</b><span>تدقيق مزدوج ومصادقة لجنة الوزارة بنسبة خطأ محددة بالعقد</span></div>
+      <div><i>5</i><b>ملف موحد</b><span>كل مستفيد ملف واحد يجمع القديم والجديد ويُربط بتطبيق تمكين</span></div>
+    </div>
+
+    <div class="onefile reveal d2"><i>🗂️</i><div><b>مثال: مواطن مشمول بالحماية الاجتماعية منذ 2012</b><p>ملفه الورقي القديم يُمسح ويُفهرس (الأرشفة) ← يقدّم تحديث بيانات من التطبيق (تمكين) ← التعديل يصل لقسم الرواتب ويُحتسب تلقائياً (ERP) ← كل شيء محفوظ بملفه الموحد ويظهر للباحث الاجتماعي والوزير بنفس اللحظة.</p></div></div>
+  </div>
+</section>
+
 <footer>
   <div class="wrap">
+    <div class="fbrand"><img src="iraq_emblem.png" alt=""><span>×</span><img src="enjaz.png" alt="enjaz" class="ez"></div>
     <div><b data-i18n="foot.1">إنجاز لتكنولوجيا المعلومات – بغداد · منصة تمكين</b></div>
     <div class="sm" data-i18n="foot.2">ديمو تجريبي لأغراض العرض · جميع البيانات والأرقام افتراضية · الشعار الرسمي يُستبدل عند الاعتماد</div>
   </div>
@@ -890,7 +966,7 @@ ar:{
 },
 ku:{
  brand:'وەزارەتی کار و کاروباری کۆمەڵایەتی',brandSub:'دیمۆی پلاتفۆرمی تەمکین · ئینجاز',
- 'nav.live':'دیمۆی زیندوو','nav.calc':'ژمێرەری داهات','nav.compare':'پێش / پاش','nav.services':'خزمەتگوزارییەکان',
+ 'nav.live':'دیمۆی زیندوو','nav.calc':'ژمێرەری داهات','nav.compare':'پێش / پاش','nav.services':'خزمەتگوزارییەکان','nav.erp':'ERP و ئەرشیف',
  'hero.eyebrow':'دیمۆی زیندووی کارلێکەر · وەزارەتی کار و کاروباری کۆمەڵایەتی',
  'hero.h1':'خزمەتگوزارییەکانی وەزارەت<br>پێشکەش و پەسەند دەکرێن<br><span class="grad">لەبەرچاوت ئێستا</span>',
  'hero.lead':'ئەم لاپەڕەیە پێشکەشکردن نییە؛ نموونەیەکی کارایە لە پلاتفۆرمی <b style="color:#fff">تەمکین</b>ی ئینجاز: داواکاری لە ئەپی هاوڵاتییەوە پێشکەش بکە، باج بە ئەلیکترۆنی بدە، پاشان لە داشبۆردی وەزارەتەوە پەسەندی بکە و ببینە نوێکارییەکە دەستبەجێ دەگاتە هاوڵاتی.',
@@ -925,7 +1001,7 @@ ku:{
 },
 en:{
  brand:'Ministry of Labour & Social Affairs',brandSub:'Tamkeen platform demo · Enjaz',
- 'nav.live':'Live demo','nav.calc':'Revenue calculator','nav.compare':'Before / After','nav.services':'Services',
+ 'nav.live':'Live demo','nav.calc':'Revenue calculator','nav.compare':'Before / After','nav.services':'Services','nav.erp':'ERP & Archiving',
  'hero.eyebrow':'Interactive live demo · Ministry of Labour & Social Affairs',
  'hero.h1':'Ministry services<br>submitted, paid and approved<br><span class="grad">right in front of you</span>',
  'hero.lead':'This page is not a slide deck; it is a working model of the <b style="color:#fff">Tamkeen</b> platform by Enjaz: submit a request from the citizen app, pay the fee electronically, then approve it from the ministry dashboard and watch the update reach the citizen instantly. No coding for each new service.',

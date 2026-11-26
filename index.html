@@ -244,7 +244,7 @@ footer{text-align:center;color:var(--muted);padding:40px 0;font-size:14px;border
 .banner img{height:64px}
 .banner b{font-size:20px;display:block}.banner span{color:var(--muted);font-size:14px}
 @media(max-width:960px){.svc-grid{grid-template-columns:1fr}}
-</style>
+.enjaz{display:flex;align-items:center;background:#fff;border-radius:10px;padding:4px 8px;flex:none;margin-inline-start:14px}.enjaz img{height:24px;display:block}footer .fb{display:flex;justify-content:center;align-items:center;gap:14px;margin-bottom:12px}footer .fb img{height:38px}footer .fb .ez{background:#fff;border-radius:10px;padding:5px 9px;height:40px}footer .fb span{opacity:.5;font-size:18px}@media(max-width:900px){.enjaz{display:none}}</style>
 </head>
 <body>
 
@@ -262,6 +262,7 @@ footer{text-align:center;color:var(--muted);padding:40px 0;font-size:14px;border
       <li><a href="#model">النموذج</a></li>
       <li><a href="#plan">التنفيذ</a></li>
     </ul>
+    <a class="enjaz" title="إنجاز لتكنولوجيا المعلومات"><img src="enjaz.png" alt="enjaz"></a>
   </div>
 </nav>
 
@@ -858,7 +859,7 @@ footer{text-align:center;color:var(--muted);padding:40px 0;font-size:14px;border
   </div>
 </section>
 
-<footer>ديمو توضيحي مُعدّ لـوزارة العمل والشؤون الاجتماعية · شركة إنجاز لتكنولوجيا المعلومات – بغداد · الشريك التقني لشركة كي كارد</footer>
+<footer><div class="fb"><img src="iraq_emblem.png" alt=""><span>×</span><img src="enjaz.png" alt="enjaz" class="ez"></div>ديمو توضيحي مُعدّ لـوزارة العمل والشؤون الاجتماعية · شركة إنجاز لتكنولوجيا المعلومات – بغداد · الشريك التقني لشركة كي كارد</footer>
 
 <script>
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
