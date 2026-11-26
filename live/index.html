@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ديمو حي – تمكين | وزارة العمل والشؤون الاجتماعية – إنجاز</title>
+<link rel="icon" href="iraq_emblem.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#060b18;--bg2:#0b1224;--card:rgba(255,255,255,.04);--line:rgba(255,255,255,.08);
+  --txt:#eef2ff;--muted:#9aa5c4;--gold:#f5b942;--cyan:#22d3ee;--violet:#8b5cf6;--green:#34d399;--teal:#0f7a5a;--red:#f87171;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Tajawal','Noto Naskh Arabic','Geeza Pro',system-ui,sans-serif;background:var(--bg);color:var(--txt);overflow-x:hidden;line-height:1.7}
+html[lang=en] body{font-family:'Tajawal','Segoe UI',system-ui,-apple-system,sans-serif;letter-spacing:.1px}
+html[lang=ku] body{font-family:'Tajawal','Noto Naskh Arabic','Geeza Pro','Segoe UI',system-ui,sans-serif}
+body::before{content:"";position:fixed;inset:0;z-index:-1;
+  background:radial-gradient(900px 500px at 85% -10%,rgba(139,92,246,.25),transparent 60%),
+             radial-gradient(800px 500px at 10% 20%,rgba(34,211,238,.14),transparent 60%),
+             radial-gradient(700px 600px at 50% 110%,rgba(245,185,66,.12),transparent 60%)}
+.wrap{max-width:1200px;margin:0 auto;padding:0 32px}
+section{padding:100px 0;position:relative}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:14px;color:var(--cyan);
+  border:1px solid rgba(34,211,238,.3);padding:6px 16px;border-radius:999px;background:rgba(34,211,238,.06);margin-bottom:22px}
+.eyebrow::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--cyan);box-shadow:0 0 14px var(--cyan)}
+h1{font-size:clamp(38px,5.6vw,72px);font-weight:900;line-height:1.15}
+html[lang=en] h1{font-size:clamp(34px,4.6vw,60px)}
+html[lang=ku] h1{font-size:clamp(30px,4.4vw,56px)}
+h2{font-size:clamp(30px,4vw,48px);font-weight:800;line-height:1.25;margin-bottom:16px}
+h3{font-size:22px;font-weight:700}
+.lead{font-size:19px;color:var(--muted);max-width:780px;margin-top:16px}
+.grad{background:linear-gradient(90deg,var(--gold),#ffd98a);-webkit-background-clip:text;background-clip:text;color:transparent}
+.grad2{background:linear-gradient(90deg,var(--cyan),var(--violet));-webkit-background-clip:text;background-clip:text;color:transparent}
+.reveal{opacity:0;transform:translateY(34px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+.d1{transition-delay:.1s}.d2{transition-delay:.22s}.d3{transition-delay:.34s}.d4{transition-delay:.46s}
+.btn{display:inline-block;padding:12px 26px;border-radius:12px;font-weight:700;text-decoration:none;transition:.3s;border:0;cursor:pointer;font-family:inherit;font-size:15px}
+.btn-gold{background:linear-gradient(135deg,var(--gold),#ffcf6b);color:#1a1200;box-shadow:0 10px 30px rgba(245,185,66,.3)}
+.btn-gold:hover{transform:translateY(-2px)}
+.btn-ghost{border:1px solid var(--line);color:#fff;background:var(--card)}
+.btn-ghost:hover{background:rgba(255,255,255,.08)}
+.btn-sm{padding:8px 16px;font-size:13px;border-radius:10px}
+
+/* NAV */
+nav{position:fixed;top:0;inset-inline:0;z-index:50;backdrop-filter:blur(16px);background:rgba(6,11,24,.7);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:14px}
+.ministry{display:flex;align-items:center;gap:12px;min-width:0}
+.emb{height:44px;width:auto;filter:drop-shadow(0 2px 6px rgba(0,0,0,.4));flex:none}
+.ministry b{font-size:15px;line-height:1.25;display:block;white-space:nowrap}
+.ministry small{color:var(--muted);font-size:11px;display:block}
+nav ul{display:flex;gap:22px;list-style:none;font-size:14px;color:var(--muted)}
+nav a{color:inherit;text-decoration:none}nav a:hover{color:#fff}
+.lang{display:flex;background:rgba(255,255,255,.06);border:1px solid var(--line);border-radius:999px;padding:3px;gap:2px;flex:none}
+.lang button{background:transparent;border:0;color:var(--muted);font-family:inherit;font-weight:700;font-size:12px;padding:5px 11px;border-radius:999px;cursor:pointer;transition:.2s}
+.lang button.on{background:var(--gold);color:#1a1200}
+
+/* HERO */
+#hero{min-height:92vh;display:flex;align-items:center;padding-top:120px}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center}
+.hero-cta{display:flex;gap:14px;margin-top:36px;flex-wrap:wrap}
+.stats{display:flex;gap:40px;margin-top:52px;flex-wrap:wrap}
+.stat b{display:block;font-size:40px;font-weight:900;color:#fff;line-height:1}
+.stat span{color:var(--muted);font-size:14px}
+.hero-visual{position:relative;height:620px}
+.glow{position:absolute;width:420px;height:420px;border-radius:50%;filter:blur(90px);opacity:.5;z-index:0}
+.g1{background:var(--violet);inset-inline-end:0;top:120px}.g2{background:var(--cyan);inset-inline-end:260px;bottom:0}
+@keyframes float{0%,100%{translate:0 0}50%{translate:0 -16px}}
+.hero-visual .phone{position:absolute;inset-inline-end:40px;top:0;z-index:3;animation:float 7s ease-in-out infinite}
+.hero-visual .mini-dash{position:absolute;inset-inline-start:0;bottom:10px;width:320px;z-index:2;animation:float 8s ease-in-out 1s infinite}
+.hero-visual .mini-dash .dash{min-height:auto;padding:12px}
+
+/* PHONE */
+.phone{width:300px;aspect-ratio:9/18.5;border-radius:42px;background:#0d0f14;padding:12px;position:relative;
+  box-shadow:0 40px 100px rgba(0,0,0,.6),inset 0 0 0 2px #2a2f45;flex:none}
+.phone::after{content:"";position:absolute;top:12px;left:50%;transform:translateX(-50%);width:110px;height:26px;background:#0d0f14;border-radius:0 0 18px 18px;z-index:5}
+.screen{width:100%;height:100%;border-radius:32px;background:#f5f7f9;overflow:hidden;position:relative;direction:rtl;color:#1b2430;font-size:11px;text-align:right}
+.scroll{position:absolute;inset:0;bottom:70px;overflow-y:auto;scrollbar-width:none}
+.scroll::-webkit-scrollbar{display:none}
+.screen.nonav .scroll{bottom:10px}
+.sc-brand{display:flex;align-items:center;gap:8px;padding:36px 16px 0}
+.sc-brand img{height:30px}
+.sc-brand b{font-size:10.5px;line-height:1.25;display:block}
+.sc-brand small{font-size:8px;color:#8a94a6}
+.sc-top{display:flex;justify-content:space-between;align-items:center;padding:6px 16px 8px}
+.sc-top .hi{font-weight:900;font-size:17px;line-height:1.2}
+.sc-top .hi small{display:block;font-weight:400;color:#8a94a6;font-size:9px}
+.sc-top .ico i{width:32px;height:32px;border-radius:50%;background:#fff;display:grid;place-items:center;font-style:normal;box-shadow:0 2px 8px rgba(0,0,0,.08);position:relative}
+.sc-top .ico i.dot::after{content:"";position:absolute;top:6px;right:7px;width:7px;height:7px;border-radius:50%;background:#e5484d;border:2px solid #fff}
+.sc-search{margin:4px 16px 12px;background:#fff;border-radius:14px;padding:9px 14px;color:#9aa3b5;display:flex;gap:8px;box-shadow:0 2px 10px rgba(0,0,0,.05)}
+.sc-h{display:flex;justify-content:space-between;padding:0 16px 8px;font-weight:800;font-size:13px}
+.sc-h span{color:#0f7a5a;font-weight:500;font-size:10px}
+.sc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;padding:0 16px 14px}
+.sc-grid .it{text-align:center;cursor:pointer;transition:.2s}
+.sc-grid .it:active{transform:scale(.94)}
+.sc-grid .it .bx{aspect-ratio:1;background:#fff;border-radius:18px;display:grid;place-items:center;font-size:24px;box-shadow:0 2px 10px rgba(0,0,0,.05);margin-bottom:6px}
+.sc-grid .it b{font-size:9.5px;font-weight:700;display:block;line-height:1.3}
+.sc-nav{position:absolute;bottom:14px;left:14px;right:14px;background:#fff;border-radius:22px;padding:9px 6px;display:flex;justify-content:space-around;font-size:8.5px;color:#7b8597;box-shadow:0 6px 24px rgba(0,0,0,.1);z-index:4}
+.sc-nav div{cursor:pointer;text-align:center;min-width:44px}
+.sc-nav i{display:block;font-style:normal;font-size:15px;text-align:center}
+.sc-nav .on{color:#0f7a5a;font-weight:700}
+.sc-title{padding:44px 16px 8px;font-weight:900;font-size:14px;display:flex;align-items:center;gap:8px}
+.sc-title i{font-style:normal;color:#0f7a5a;cursor:pointer;width:26px;height:26px;border-radius:50%;background:#fff;display:grid;place-items:center;box-shadow:0 2px 8px rgba(0,0,0,.06);font-size:14px}
+.steps{display:flex;gap:4px;margin:0 16px 12px}
+.steps i{flex:1;height:4px;border-radius:99px;background:#e3e7ee}
+.steps i.on{background:#0f7a5a}
+.steps-lbl{display:flex;justify-content:space-between;margin:0 16px 6px;font-size:8.5px;color:#8a94a6}
+.steps-lbl b{color:#0f7a5a}
+.fld{margin:0 16px 9px}
+.fld label{display:block;font-size:9.5px;color:#5c6677;margin-bottom:3px;font-weight:700}
+.fld input,.fld select{width:100%;background:#fff;border:1px solid #e3e7ee;border-radius:10px;padding:8px 11px;color:#1b2430;font-family:inherit;font-size:10.5px;outline:none;direction:rtl}
+.fld input:focus,.fld select:focus{border-color:#0f7a5a;box-shadow:0 0 0 3px rgba(15,122,90,.12)}
+.fld.new input{animation:popin .5s}
+@keyframes popin{0%{transform:scale(.9);background:#e6f4ec}100%{transform:none}}
+.fld .up{background:#fff;border:1px dashed #b9c3d3;border-radius:10px;padding:9px 12px;display:flex;justify-content:space-between;align-items:center;cursor:pointer;color:#0f7a5a;font-weight:700;font-size:10px}
+.fld .up.done{border-style:solid;border-color:#0f7a5a;background:#f0faf5;color:#1b2430;font-weight:500}
+.fld .up span{color:#9aa3b5;font-weight:400}
+.fld .up.done span{color:#0f7a5a;font-weight:800}
+.sc-btn{margin:10px 16px;background:linear-gradient(135deg,#0f7a5a,#0b5a43);color:#fff;text-align:center;border-radius:12px;padding:11px;font-weight:800;font-size:12px;cursor:pointer;transition:.2s;user-select:none}
+.sc-btn:active{transform:scale(.97)}
+.sc-btn.ghost{background:#fff;color:#0f7a5a;border:1px solid #cfe6dc}
+.sc-btn.dis{opacity:.45;pointer-events:none}
+.fee{margin:0 16px 10px;background:#fff8e8;border:1px solid #f5d48a;border-radius:12px;padding:9px 12px;font-size:10px}
+.fee .r{display:flex;justify-content:space-between;padding:2px 0}
+.fee .r.t{border-top:1px dashed #e6c77a;margin-top:4px;padding-top:5px;font-weight:900;font-size:11px}
+.fee .r.t b{color:#b57b00}
+.fee.free{background:#eaf7f0;border-color:#b7e2cb}
+.fee.free .r.t b{color:#2f7a52}
+.rev{margin:0 16px 10px;background:#fff;border-radius:12px;padding:10px 12px;box-shadow:0 2px 10px rgba(0,0,0,.05)}
+.rev .r{display:flex;justify-content:space-between;font-size:9.5px;padding:3px 0;border-bottom:1px solid #f0f2f6}
+.rev .r:last-child{border:0}
+.rev .r span{color:#8a94a6}
+.pay{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin:0 16px 10px}
+.pay div{background:#fff;border:2px solid #e3e7ee;border-radius:12px;padding:8px 4px;text-align:center;font-size:9px;font-weight:700;cursor:pointer;transition:.2s}
+.pay div i{display:block;font-style:normal;font-size:18px;margin-bottom:2px}
+.pay div.on{border-color:#0f7a5a;background:#f0faf5}
+.trk{margin:0 16px 10px;background:#fff;border-radius:16px;padding:14px;box-shadow:0 2px 10px rgba(0,0,0,.05)}
+.trk .no{font-weight:900;font-size:11px;color:#5c6677;display:flex;justify-content:space-between;align-items:center}
+.trk .no em{font-style:normal;background:#fff3d6;color:#9a6700;padding:2px 8px;border-radius:999px;font-size:8.5px}
+.trk .no em.ok{background:#e6f4ec;color:#2f7a52}
+.trk h4{font-size:12px;margin:5px 0 10px}
+.st{display:flex;gap:10px;position:relative;padding-bottom:11px}
+.st::before{content:"";position:absolute;right:9px;top:20px;bottom:0;width:2px;background:#e3e7ee}
+.st:last-child::before{display:none}
+.st i{width:20px;height:20px;border-radius:50%;background:#0f7a5a;color:#fff;display:grid;place-items:center;font-style:normal;font-size:10px;flex:none;z-index:1;transition:.4s}
+.st.pend i{background:#fff;border:2px solid #f5b942;box-shadow:0 0 0 4px rgba(245,185,66,.2);animation:pulse 1.6s infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 3px rgba(245,185,66,.25)}50%{box-shadow:0 0 0 7px rgba(245,185,66,.08)}}
+.st.wait i{background:#e3e7ee}
+.st b{font-size:10.5px;display:block}.st span{font-size:8.5px;color:#8a94a6}
+.st.wait b{color:#9aa3b5}
+.rcpt{margin:0 16px 10px;background:#fff;border-radius:16px;padding:16px;text-align:center;box-shadow:0 2px 10px rgba(0,0,0,.05)}
+.rcpt .ok{width:56px;height:56px;border-radius:50%;background:#e6f4ec;color:#2f7a52;display:grid;place-items:center;font-size:26px;margin:0 auto 10px;animation:okpop .6s cubic-bezier(.2,1.4,.4,1)}
+@keyframes okpop{0%{transform:scale(0)}100%{transform:scale(1)}}
+.rcpt b{display:block;font-size:13px}.rcpt .amt{font-size:21px;font-weight:900;color:#1b2430;margin:6px 0}
+.rcpt .row{display:flex;justify-content:space-between;font-size:9.5px;color:#5c6677;padding:5px 0;border-top:1px dashed #e3e7ee;text-align:right}
+.rcpt .qr{width:52px;height:52px;margin:8px auto 0;background:
+  repeating-linear-gradient(90deg,#1b2430 0 4px,transparent 4px 8px),repeating-linear-gradient(0deg,#1b2430 0 4px,#fff 4px 8px);background-blend-mode:difference;border:3px solid #fff;outline:1px solid #e3e7ee}
+.req-card{margin:0 16px 9px;background:#fff;border-radius:14px;padding:11px 12px;box-shadow:0 2px 10px rgba(0,0,0,.05);cursor:pointer;display:flex;gap:10px;align-items:center}
+.req-card i{width:34px;height:34px;border-radius:10px;background:#f4f6fa;display:grid;place-items:center;font-style:normal;font-size:17px;flex:none}
+.req-card b{font-size:10.5px;display:block}.req-card span{font-size:8.5px;color:#8a94a6}
+.req-card em{margin-inline-start:auto;font-style:normal;background:#fff3d6;color:#9a6700;padding:2px 8px;border-radius:999px;font-size:8.5px;white-space:nowrap}
+.req-card em.ok{background:#e6f4ec;color:#2f7a52}
+.empty{margin:30px 16px;text-align:center;color:#8a94a6;font-size:10px}
+.empty i{font-style:normal;font-size:34px;display:block;margin-bottom:8px}
+.news{margin:0 16px 9px;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,.05)}
+.news .img{height:62px;background:linear-gradient(135deg,#0f7a5a,#22d3ee)}
+.news .img.b{background:linear-gradient(135deg,#8b5cf6,#f5b942)}
+.news .img.c{background:linear-gradient(135deg,#f5b942,#f87171)}
+.news div{padding:8px 11px}.news b{font-size:10px;display:block}.news span{font-size:8.5px;color:#8a94a6}
+.prof{margin:0 16px 10px;background:#fff;border-radius:16px;padding:14px;text-align:center;box-shadow:0 2px 10px rgba(0,0,0,.05)}
+.prof .av{width:54px;height:54px;border-radius:50%;background:linear-gradient(135deg,#0f7a5a,#22d3ee);margin:0 auto 8px;display:grid;place-items:center;font-size:24px;color:#fff}
+.prof b{font-size:12px;display:block}.prof span{font-size:9px;color:#8a94a6}
+.prof .row{display:flex;justify-content:space-between;font-size:9.5px;padding:6px 0;border-top:1px solid #f0f2f6;text-align:right}
+.toast{position:absolute;top:40px;left:14px;right:14px;background:#1b2430;color:#fff;border-radius:14px;padding:9px 12px;display:flex;gap:10px;align-items:center;z-index:9;box-shadow:0 10px 30px rgba(0,0,0,.35);transform:translateY(-120px);opacity:0;transition:.45s cubic-bezier(.2,1,.3,1)}
+.toast.show{transform:none;opacity:1}
+.toast i{width:30px;height:30px;border-radius:9px;background:#0f7a5a;display:grid;place-items:center;font-style:normal;flex:none}
+.toast b{font-size:10px;display:block}.toast span{font-size:8.5px;color:#aab4c8}
+.paying{margin:30px 16px;text-align:center;font-size:10px;color:#5c6677}
+.spin{width:44px;height:44px;border:4px solid #e3e7ee;border-top-color:#0f7a5a;border-radius:50%;margin:0 auto 12px;animation:rot .8s linear infinite}
+@keyframes rot{to{transform:rotate(360deg)}}
+
+/* DASHBOARD WINDOW */
+.laptop{border-radius:18px;background:#1a1f33;padding:14px 14px 0;box-shadow:0 40px 90px rgba(0,0,0,.6),0 0 0 1px #2a2f45;width:100%}
+.laptop .bar{display:flex;gap:6px;margin-bottom:10px;align-items:center}.laptop .bar i{width:10px;height:10px;border-radius:50%}
+.laptop .bar i:nth-child(1){background:#ff5f57}.laptop .bar i:nth-child(2){background:#febc2e}.laptop .bar i:nth-child(3){background:#28c840}
+.laptop .bar span{margin:0 auto;font-size:10px;color:#7b8597;background:#0d1020;padding:2px 14px;border-radius:6px;direction:ltr}
+.dash{background:#f4f6fa;border-radius:10px 10px 0 0;padding:14px;color:#1b2430;direction:rtl;font-size:11px;min-height:500px;text-align:right}
+.dash .dh{display:flex;align-items:center;gap:10px;margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid #e3e7ee}
+.dash .dh img{height:30px}.dash .dh b{font-size:12px;display:block}.dash .dh small{font-size:9px;color:#7b8597}
+.dash .dh .usr{margin-inline-start:auto;display:flex;align-items:center;gap:6px;font-size:9.5px;color:#5c6677}
+.dash .dh .usr i{width:24px;height:24px;border-radius:50%;background:#0f7a5a;color:#fff;display:grid;place-items:center;font-style:normal;font-size:11px}
+.tabs{display:flex;gap:4px;background:#e9edf3;border-radius:10px;padding:3px;margin-bottom:12px;width:max-content;max-width:100%}
+.tabs div{padding:5px 12px;border-radius:8px;font-size:10.5px;font-weight:700;color:#5c6677;cursor:pointer;transition:.2s;white-space:nowrap}
+.tabs div.on{background:#fff;color:#0f7a5a;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:12px}
+.kpi{background:#fff;border-radius:12px;padding:10px 12px;border-top:3px solid var(--k);box-shadow:0 2px 8px rgba(0,0,0,.04);display:flex;justify-content:space-between;align-items:flex-start;transition:.3s}
+.kpi.bump{transform:scale(1.04);box-shadow:0 8px 24px rgba(15,122,90,.2)}
+.kpi b{display:block;font-size:15px;font-weight:900;white-space:nowrap}.kpi span{font-size:9px;color:#7b8597}
+.kpi i{width:28px;height:28px;border-radius:8px;background:var(--k);color:#fff;display:grid;place-items:center;font-style:normal;font-size:13px;flex:none}
+.tbl-wrap{background:#fff;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,.04);overflow:auto}
+.tbl{width:100%;border-collapse:collapse;font-size:10px;min-width:460px}
+.tbl th{background:#f8fafc;text-align:right;padding:8px 10px;color:#5c6677;font-weight:700;white-space:nowrap}
+.tbl td{padding:8px 10px;border-top:1px solid #eef1f6;white-space:nowrap}
+.tbl tr.row{cursor:pointer;transition:.2s}
+.tbl tr.row:hover td{background:#f8fafc}
+.tbl tr.sel td{background:#f0faf5}
+.tbl tr.new td{animation:glow 2.4s ease-out}
+@keyframes glow{0%{background:#fff3d6;box-shadow:inset 0 0 0 1px #f5b942}100%{background:transparent}}
+.pill{padding:2px 8px;border-radius:999px;font-size:9px;font-weight:700;white-space:nowrap}
+.pill.g{background:#e6f4ec;color:#2f7a52}.pill.y{background:#fff3d6;color:#9a6700}.pill.b{background:#e6f0ff;color:#2355b8}.pill.n{background:#fde8e8;color:#b42318}
+.badge-new{display:inline-block;background:#f5b942;color:#1a1200;font-weight:900;font-size:8px;padding:1px 6px;border-radius:6px;margin-inline-start:4px;animation:blink 1s 3}
+@keyframes blink{50%{opacity:.3}}
+.det{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.det .box{background:#fff;border-radius:12px;padding:12px;box-shadow:0 2px 8px rgba(0,0,0,.04)}
+.det .box h6{font-size:11px;font-weight:900;margin-bottom:8px;display:flex;justify-content:space-between;align-items:center}
+.det .kv{display:flex;justify-content:space-between;font-size:9.5px;padding:4px 0;border-bottom:1px solid #f0f2f6}
+.det .kv span{color:#8a94a6}
+.det .att{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}
+.det .att span{background:#f4f6fa;border-radius:8px;padding:4px 8px;font-size:9px;display:flex;gap:4px;align-items:center}
+.dbtn{display:inline-block;background:linear-gradient(135deg,#0f7a5a,#0b5a43);color:#fff;border-radius:9px;padding:8px 14px;font-weight:800;font-size:10.5px;cursor:pointer;border:0;font-family:inherit;transition:.2s}
+.dbtn:hover{transform:translateY(-1px)}.dbtn:active{transform:scale(.97)}
+.dbtn.ghost{background:#fff;color:#5c6677;border:1px solid #e3e7ee}
+.dbtn.dis{opacity:.4;pointer-events:none}
+.dbtn.gold{background:linear-gradient(135deg,#f5b942,#ffcf6b);color:#1a1200}
+.stg{display:flex;gap:4px;margin:8px 0}
+.stg div{flex:1;text-align:center;font-size:8.5px;color:#9aa3b5;position:relative;padding-top:18px}
+.stg div::before{content:"";position:absolute;top:4px;left:0;right:0;height:5px;background:#e3e7ee;border-radius:99px}
+.stg div.done::before{background:#0f7a5a}
+.stg div.cur::before{background:#f5b942}
+.stg div.done,.stg div.cur{color:#1b2430;font-weight:700}
+.log{font-size:9px;color:#5c6677;max-height:120px;overflow:auto}
+.log div{padding:4px 0;border-bottom:1px dashed #eef1f6;display:flex;gap:6px}
+.log div b{color:#0f7a5a;font-weight:700;white-space:nowrap}
+.builder{display:grid;grid-template-columns:170px 1fr 190px;gap:10px}
+.builder .pal,.builder .cv,.builder .props{background:#fff;border-radius:12px;padding:10px;box-shadow:0 2px 8px rgba(0,0,0,.04)}
+.builder b.t{font-size:10px;display:block;margin-bottom:6px;color:#5c6677}
+.builder .pal div{background:#f4f6fa;border-radius:8px;padding:6px 8px;margin-bottom:5px;font-size:9.5px;display:flex;gap:6px;cursor:grab;border:1px dashed transparent}
+.builder .pal div:hover{border-color:#b9c3d3}
+.builder .cv .f{border:1px dashed #cfd6e2;border-radius:8px;padding:7px 10px;margin-bottom:6px;font-size:10px;display:flex;justify-content:space-between;align-items:center;background:#fafbfd}
+.builder .cv .f span{color:#9aa3b5;font-size:9px}
+.builder .cv .f.ex{border-color:#0f7a5a;background:#f0faf5;animation:popin .5s}
+.builder .cv .f.pay{border-color:#f5b942;background:#fff8e8}
+.builder .cv .f .h{cursor:grab;color:#b9c3d3;margin-inline-start:4px}
+.tog{display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid #f0f2f6;font-size:9.5px;cursor:pointer}
+.tog:last-child{border:0}
+.sw{width:30px;height:17px;border-radius:99px;background:#d9dee8;position:relative;transition:.2s;flex:none}
+.sw::after{content:"";position:absolute;top:2px;right:2px;width:13px;height:13px;border-radius:50%;background:#fff;transition:.2s;box-shadow:0 1px 3px rgba(0,0,0,.2)}
+.tog.on .sw{background:#0f7a5a}.tog.on .sw::after{right:15px}
+.sel-svc{width:100%;font-family:inherit;font-size:10px;padding:6px 8px;border-radius:8px;border:1px solid #e3e7ee;background:#fff;margin-bottom:8px}
+.hint{background:#eaf2ff;border:1px solid #c9dcfb;color:#2355b8;border-radius:8px;padding:6px 9px;font-size:9px;margin-top:8px;line-height:1.5}
+
+/* LIVE SECTION LAYOUT */
+.live-grid{display:grid;grid-template-columns:330px 1fr;gap:34px;margin-top:40px;align-items:start}
+.live-col{display:flex;flex-direction:column;align-items:center;gap:14px;min-width:0}
+.live-grid>*,.laptop,.tbl-wrap,.dash{min-width:0;max-width:100%}
+.cap{text-align:center;color:var(--muted);font-size:13px}
+.cap b{display:block;color:#fff;font-size:15px}
+.guide{display:flex;gap:14px;flex-wrap:wrap;align-items:center;justify-content:space-between;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px 22px;margin-top:34px}
+.guide ol{display:flex;gap:20px;list-style:none;flex-wrap:wrap}
+.guide li{display:flex;align-items:center;gap:8px;color:#d7ddf3;font-size:14px}
+.guide li i{width:26px;height:26px;border-radius:50%;background:var(--gold);color:#1a1200;display:grid;place-items:center;font-style:normal;font-weight:900;font-size:13px}
+.sync{display:inline-flex;align-items:center;gap:8px;font-size:12px;color:var(--green);background:rgba(52,211,153,.08);border:1px solid rgba(52,211,153,.3);padding:4px 12px;border-radius:999px}
+.sync::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 10px var(--green);animation:blink 1.4s infinite}
+
+/* CALC */
+.calc{display:grid;grid-template-columns:1fr 1.15fr;gap:34px;margin-top:44px;align-items:start}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:28px;backdrop-filter:blur(8px)}
+.ctl{margin-bottom:22px}
+.ctl .lb{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;font-size:14px;color:#d7ddf3}
+.ctl .lb input{width:120px;background:rgba(255,255,255,.06);border:1px solid var(--line);border-radius:8px;color:#fff;font-family:inherit;font-weight:800;font-size:14px;padding:5px 10px;text-align:center;direction:ltr;outline:none}
+.ctl .lb input:focus{border-color:var(--gold)}
+.ctl input[type=range]{width:100%;accent-color:var(--gold);cursor:pointer}
+.outs{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.out{background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:18px;padding:20px 22px;position:relative;overflow:hidden}
+.out::before{content:"";position:absolute;top:0;inset-inline:0;height:3px;background:var(--k,var(--gold))}
+.out b{display:block;font-size:clamp(22px,2.4vw,30px);font-weight:900;color:#fff;line-height:1.2;direction:ltr;text-align:start}
+.out small{font-size:12px;color:var(--muted);font-weight:400}
+.out span{display:block;color:var(--muted);font-size:13px;margin-top:6px}
+.note{margin-top:18px;font-size:13px;color:#d7ddf3;background:rgba(245,185,66,.07);border:1px solid rgba(245,185,66,.25);border-radius:14px;padding:14px 18px;line-height:1.8}
+.chart{margin-top:16px;background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:18px;padding:20px 22px}
+.chart h4{font-size:15px;font-weight:800}.chart small{color:var(--muted);font-size:12px;display:block;margin-bottom:14px}
+.bars{display:flex;align-items:flex-end;gap:6px;height:150px;direction:ltr}
+.bars div{flex:1;background:linear-gradient(180deg,var(--gold),rgba(245,185,66,.3));border-radius:6px 6px 2px 2px;position:relative;transition:height .8s cubic-bezier(.2,.7,.2,1);min-height:4px}
+.bars div::after{content:attr(data-v);position:absolute;bottom:100%;left:50%;transform:translateX(-50%);font-size:9px;color:var(--muted);white-space:nowrap;margin-bottom:3px;opacity:0;transition:.3s}
+.bars div:hover::after{opacity:1}
+.bars div:hover{filter:brightness(1.2)}
+.mths{display:flex;gap:6px;direction:ltr;margin-top:6px}
+.mths span{flex:1;text-align:center;font-size:10px;color:var(--muted)}
+
+/* COMPARE */
+.cmp-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:44px}
+.jcard{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:28px;position:relative}
+.jcard.bad{border-color:rgba(248,113,113,.3);background:linear-gradient(160deg,rgba(248,113,113,.08),rgba(255,255,255,.02))}
+.jcard.good{border-color:rgba(52,211,153,.35);background:linear-gradient(160deg,rgba(52,211,153,.1),rgba(34,211,238,.04))}
+.jcard h3{display:flex;align-items:center;gap:10px;margin-bottom:18px}
+.jcard h3 i{font-style:normal;width:40px;height:40px;border-radius:12px;display:grid;place-items:center;font-size:20px;background:rgba(255,255,255,.06)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+.chip{border-radius:10px;padding:6px 12px;font-size:13px;font-weight:700;border:1px solid var(--line);background:rgba(255,255,255,.05)}
+.bad .chip{color:#ffb4b4;border-color:rgba(248,113,113,.3)}
+.good .chip{color:#a7f3d0;border-color:rgba(52,211,153,.35)}
+.jt{display:grid;gap:0}
+.jt .s{display:flex;gap:14px;position:relative;padding-bottom:18px}
+.jt .s::before{content:"";position:absolute;inset-inline-start:17px;top:36px;bottom:0;width:2px;background:var(--line)}
+.jt .s:last-child::before{display:none}
+.jt .s i{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;font-style:normal;flex:none;background:var(--bg2);border:1px solid var(--line);font-size:16px;z-index:1}
+.good .jt .s i{border-color:rgba(52,211,153,.5)}
+.jt .s b{display:block;font-size:15px}.jt .s span{color:var(--muted);font-size:13px}
+.jcard .ribbon{position:absolute;top:-14px;inset-inline-end:26px;background:var(--gold);color:#1a1200;font-weight:900;padding:5px 14px;border-radius:999px;font-size:12px;box-shadow:0 10px 30px rgba(245,185,66,.4)}
+.mrow{margin-top:26px;background:var(--card);border:1px solid var(--line);border-radius:24px;padding:26px 28px}
+.mrow h3{margin-bottom:16px}
+.mrow .g{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.mrow .c{background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:16px;padding:16px 18px}
+.mrow .c b{display:block;font-size:15px;margin-bottom:8px;display:flex;gap:8px;align-items:center}
+.mrow .c .vs{display:grid;grid-template-columns:1fr auto 1fr;gap:8px;align-items:center;font-size:13px}
+.mrow .c .vs .o{color:#ffb4b4}.mrow .c .vs .n{color:#a7f3d0;font-weight:700}.mrow .c .vs em{font-style:normal;color:var(--muted)}
+.mrow .c .vs em::before{content:"←"}
+[dir=ltr] .mrow .c .vs em::before{content:"→"}
+
+/* SERVICES CATALOGUE */
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:44px}
+.svc{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:20px 22px;transition:.3s}
+.svc:hover{transform:translateY(-4px);border-color:rgba(255,255,255,.18)}
+.svc h3{display:flex;align-items:center;gap:10px;margin-bottom:6px;font-size:16px}
+.svc h3 i{font-style:normal;width:38px;height:38px;border-radius:12px;display:grid;place-items:center;font-size:19px;background:rgba(255,255,255,.06);flex:none}
+.svc .dep{color:var(--cyan);font-size:12px;margin-bottom:10px}
+.svc .ch{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:10px}
+.svc .ch span{background:rgba(255,255,255,.06);border:1px solid var(--line);border-radius:7px;padding:2px 8px;font-size:11px;color:#d7ddf3}
+.svc .stg2{font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:8px}
+.svc .fee-tag{color:var(--gold);font-weight:700;font-size:12px}
+.svc .free{color:var(--green);font-weight:700;font-size:12px}
+
+footer{text-align:center;color:var(--muted);padding:40px 0;font-size:14px;border-top:1px solid var(--line)}
+footer b{color:#fff}
+footer .sm{font-size:12px;margin-top:6px;opacity:.8}
+
+@media(max-width:1060px){.builder{grid-template-columns:1fr 1fr}.builder .props{grid-column:1/-1}}
+@media(max-width:960px){
+  .hero-grid,.calc,.cmp-grid,.live-grid{grid-template-columns:1fr}
+  .hero-visual{height:600px}.hero-visual .mini-dash{display:none}.hero-visual .phone{inset-inline-end:auto;left:50%;transform:translateX(-50%);animation:none}
+  nav ul{display:none}.ministry b{font-size:13px;white-space:normal}
+  .kpis{grid-template-columns:1fr 1fr}.svc-grid{grid-template-columns:1fr 1fr}.mrow .g{grid-template-columns:1fr}
+  section{padding:70px 0}.wrap{padding:0 18px}
+}
+@media(max-width:600px){
+  .svc-grid,.outs{grid-template-columns:1fr}.builder{grid-template-columns:1fr}.det{grid-template-columns:1fr}
+  .hero-visual{height:560px}.stats{gap:24px}.stat b{font-size:32px}
+  .ministry small{display:none}.ministry b{font-size:12px}.emb{height:34px}
+  .guide ol{flex-direction:column;align-items:flex-start;gap:8px}
+  .glow{width:240px;height:240px}
+  .dash{min-height:auto;padding:10px}.tabs div{padding:5px 8px;font-size:9.5px}
+}
+.static .reveal{transition:none!important;opacity:1!important;transform:none!important}
+.static #hero{min-height:auto!important}
+.static [style*="animation"],.static .phone,.static .mini-dash{animation:none!important}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="ministry"><img src="iraq_emblem.png" alt="" class="emb"><div><b data-i18n="brand">وزارة العمل والشؤون الاجتماعية</b><small data-i18n="brandSub">ديمو منصة تمكين · إنجاز</small></div></div>
+    <ul>
+      <li><a href="#live" data-i18n="nav.live">الديمو الحي</a></li>
+      <li><a href="#calc" data-i18n="nav.calc">حاسبة الإيرادات</a></li>
+      <li><a href="#compare" data-i18n="nav.compare">قبل / بعد</a></li>
+      <li><a href="#services" data-i18n="nav.services">الخدمات</a></li>
+    </ul>
+    <div class="lang" id="lang">
+      <button data-lang="ar" class="on">ع</button><button data-lang="ku">کوردی</button><button data-lang="en">EN</button>
+    </div>
+  </div>
+</nav>
+
+<!-- ================= HERO ================= -->
+<section id="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow reveal" data-i18n="hero.eyebrow">ديمو حي تفاعلي · وزارة العمل والشؤون الاجتماعية</div>
+      <h1 class="reveal d1" data-i18n="hero.h1">خدمات الوزارة<br>تُقدَّم وتُدفع وتُعتمد<br><span class="grad">أمام عينك الآن</span></h1>
+      <p class="lead reveal d2" data-i18n="hero.lead">هذه الصفحة ليست عرضاً تقديمياً؛ هي نموذج عامل لمنصة <b style="color:#fff">تمكين</b> من إنجاز: قدّم طلباً من تطبيق المواطن، ادفع الرسم إلكترونياً، ثم اعتمده من لوحة إدارة الوزارة وشاهد التحديث يصل للمواطن لحظياً. كل ذلك بدون أي برمجة لكل خدمة جديدة.</p>
+      <div class="hero-cta reveal d3">
+        <a href="#live" class="btn btn-gold" data-i18n="hero.btn1">جرّب الديمو الحي</a>
+        <a href="#calc" class="btn btn-ghost" data-i18n="hero.btn2">حاسبة الإيرادات</a>
+      </div>
+      <div class="stats reveal d4">
+        <div class="stat"><b>0</b><span data-i18n="hero.s1">كلفة بناء على الوزارة</span></div>
+        <div class="stat"><b>12</b><span data-i18n="hero.s2">خدمة نموذجية من دوائر الوزارة</span></div>
+        <div class="stat"><b>100%</b><span data-i18n="hero.s3">من الرسم الرسمي لحساب الوزارة</span></div>
+      </div>
+    </div>
+    <div class="hero-visual reveal d2">
+      <div class="glow g1"></div><div class="glow g2"></div>
+      <div class="phone">
+        <div class="screen">
+          <div class="sc-brand"><img src="iraq_emblem.png" alt=""><div><b>وزارة العمل والشؤون الاجتماعية</b><small>جمهورية العراق</small></div></div>
+          <div class="sc-top"><div class="hi">أهلاً بك 👋<small>الخميس، 26 تشرين الثاني</small></div><div class="ico"><i class="dot">🔔</i></div></div>
+          <div class="sc-search">🔍 ابحث عن خدمة...</div>
+          <div class="sc-h">الخدمات الإلكترونية <span>عرض الكل ›</span></div>
+          <div class="sc-grid">
+            <div class="it"><div class="bx">🤝</div><b>إعانة اجتماعية</b></div>
+            <div class="it"><div class="bx">🛂</div><b>إجازة عمل أجانب</b></div>
+            <div class="it"><div class="bx">💼</div><b>باحث عن عمل</b></div>
+            <div class="it"><div class="bx">🛡️</div><b>الضمان الاجتماعي</b></div>
+            <div class="it"><div class="bx">💰</div><b>قرض صغير</b></div>
+            <div class="it"><div class="bx">♿</div><b>المعين المتفرغ</b></div>
+          </div>
+          <div class="trk" style="margin-top:4px"><div class="no">ML-2026-04871 <em>البحث الاجتماعي</em></div><h4>إعانة الحماية الاجتماعية</h4>
+            <div class="st"><i>✓</i><div><b>استلام الطلب</b><span>17/11 · 10:00 ص</span></div></div>
+            <div class="st pend"><i></i><div><b>البحث الاجتماعي الميداني</b><span>جارٍ الآن</span></div></div>
+          </div>
+          <div class="sc-nav"><div class="on"><i>🏠</i>الرئيسية</div><div><i>▦</i>الخدمات</div><div><i>📰</i>الأخبار</div><div><i>📑</i>الطلبات</div><div><i>👤</i>حسابي</div></div>
+        </div>
+      </div>
+      <div class="laptop mini-dash">
+        <div class="bar"><i></i><i></i><i></i><span>admin.tamkeen.gov.iq</span></div>
+        <div class="dash">
+          <div class="kpis" style="grid-template-columns:1fr 1fr 1fr">
+            <div class="kpi" style="--k:#0f7a5a"><div><b>1,284</b><span>طلبات اليوم</span></div></div>
+            <div class="kpi" style="--k:#f5b942"><div><b>34.6 م</b><span>رسوم اليوم</span></div></div>
+            <div class="kpi" style="--k:#8b5cf6"><div><b>96%</b><span>ضمن الوقت</span></div></div>
+          </div>
+          <div class="tbl-wrap"><table class="tbl" style="min-width:0"><tr><th>الطلب</th><th>الخدمة</th><th>الحالة</th></tr>
+            <tr><td>ML-2026-04871</td><td>إعانة اجتماعية</td><td><span class="pill y">بحث ميداني</span></td></tr>
+            <tr><td>ML-2026-04870</td><td>إجازة عمل</td><td><span class="pill g">صدرت</span></td></tr>
+            <tr><td>ML-2026-04869</td><td>ضمان اجتماعي</td><td><span class="pill b">تدقيق</span></td></tr>
+          </table></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= LIVE DEMO ================= -->
+<section id="live">
+  <div class="wrap">
+    <div class="eyebrow reveal" data-i18n="live.eyebrow">ديمو حي تفاعلي</div>
+    <h2 class="reveal d1" data-i18n="live.h2">المواطن يقدّم… <span class="grad">والوزارة تعتمد… على نفس الشاشة</span></h2>
+    <p class="lead reveal d2" data-i18n="live.lead">كل ما تراه هنا يعمل فعلاً داخل الصفحة: شاشة الهاتف هي ما يراه المواطن، ونافذة اللوحة هي ما يراه موظف الوزارة. قدّم طلباً من الهاتف وراقب اللوحة تتحدث، ثم اعتمده من اللوحة وراقب الهاتف يستلم الإشعار.</p>
+
+    <div class="guide reveal d3">
+      <ol>
+        <li><i>1</i><span data-i18n="live.g1">اختر خدمة من التطبيق</span></li>
+        <li><i>2</i><span data-i18n="live.g2">قدّم الطلب وادفع الرسم</span></li>
+        <li><i>3</i><span data-i18n="live.g3">اعتمده من لوحة الإدارة وراقب الهاتف</span></li>
+      </ol>
+      <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
+        <span class="sync" data-i18n="live.sync">متزامن لحظياً</span>
+        <button class="btn btn-ghost btn-sm" id="resetBtn" data-i18n="live.reset">↺ إعادة ضبط الديمو</button>
+      </div>
+    </div>
+
+    <div class="live-grid">
+      <div class="live-col reveal d1">
+        <div class="phone"><div class="screen" id="screen"></div></div>
+        <div class="cap"><b data-i18n="live.phoneCap">تطبيق المواطن (الميني آب)</b><span data-i18n="live.phoneSub">اضغط على الخدمات والأزرار — كلها تعمل</span></div>
+      </div>
+      <div class="live-col reveal d2" style="align-items:stretch">
+        <div class="laptop">
+          <div class="bar"><i></i><i></i><i></i><span>admin.tamkeen.gov.iq / molsa</span></div>
+          <div class="dash" id="dash"></div>
+        </div>
+        <div class="cap"><b data-i18n="live.dashCap">لوحة إدارة الوزارة</b><span data-i18n="live.dashSub">اضغط على أي طلب في الجدول لاعتماده ونقله للمرحلة التالية</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CALCULATOR ================= -->
+<section id="calc">
+  <div class="wrap">
+    <div class="eyebrow reveal" data-i18n="calc.eyebrow">حاسبة الإيرادات والوفورات</div>
+    <h2 class="reveal d1" data-i18n="calc.h2">حرّك الأرقام… <span class="grad2">وشاهد الأثر على الوزارة</span></h2>
+    <p class="lead reveal d2" data-i18n="calc.lead">الأرقام أدناه افتراضية قابلة للتعديل. غيّر عدد المعاملات أو نسبة التحول الإلكتروني أو قيمة الأجور، وتتحدث النتائج فوراً.</p>
+    <div class="calc">
+      <div class="panel reveal d1">
+        <div class="ctl">
+          <div class="lb"><span data-i18n="calc.in1">عدد المعاملات السنوية</span><input type="number" id="nTx" value="600000" min="10000" step="10000"></div>
+          <input type="range" id="rTx" min="50000" max="3000000" step="10000" value="600000">
+        </div>
+        <div class="ctl">
+          <div class="lb"><span data-i18n="calc.in2">نسبة التحول الإلكتروني %</span><input type="number" id="nPct" value="60" min="0" max="100"></div>
+          <input type="range" id="rPct" min="0" max="100" step="1" value="60">
+        </div>
+        <div class="ctl">
+          <div class="lb"><span data-i18n="calc.in3">متوسط أجور الخدمة الإلكترونية (د.ع)</span><input type="number" id="nEfee" value="5000" min="0" step="500"></div>
+          <input type="range" id="rEfee" min="0" max="25000" step="500" value="5000">
+        </div>
+        <div class="ctl">
+          <div class="lb"><span data-i18n="calc.in4">متوسط الرسم الرسمي (د.ع)</span><input type="number" id="nFee" value="25000" min="0" step="1000"></div>
+          <input type="range" id="rFee" min="0" max="200000" step="1000" value="25000">
+        </div>
+        <div class="note" data-i18n="calc.note">• أجور الخدمة الإلكترونية تُحدَّد بالاتفاق مع الوزارة.<br>• الرسم الرسمي يذهب <b>100%</b> لحساب الوزارة.<br>• الخدمات الاجتماعية المجانية تبقى مجانية.<br>• تكلفة البناء والتشغيل <b>صفر</b> على الوزارة (نموذج BOT).</div>
+      </div>
+      <div class="reveal d2">
+        <div class="outs">
+          <div class="out" style="--k:var(--gold)"><b id="oEfee">0</b><span data-i18n="calc.o1">إيراد أجور الخدمة الإلكترونية السنوي</span></div>
+          <div class="out" style="--k:var(--green)"><b id="oFee">0</b><span data-i18n="calc.o2">رسوم رسمية محصّلة إلكترونياً (100% للوزارة)</span></div>
+          <div class="out" style="--k:var(--cyan)"><b id="oHrs">0</b><span data-i18n="calc.o3">ساعات عمل موظفين موفرة سنوياً (25 دقيقة/معاملة ورقية)</span></div>
+          <div class="out" style="--k:var(--violet)"><b id="oVis">0</b><span data-i18n="calc.o4">زيارات مواطنين موفرة سنوياً (3 زيارات/معاملة)</span></div>
+        </div>
+        <div class="chart">
+          <h4 data-i18n="calc.chT">الإيراد الشهري خلال السنة الأولى</h4>
+          <small data-i18n="calc.chS">منحنى انتشار تدريجي: يبدأ بخدمتين ويصل للسعة الكاملة بالشهر السابع</small>
+          <div class="bars" id="bars"></div>
+          <div class="mths" id="mths"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= COMPARE ================= -->
+<section id="compare">
+  <div class="wrap">
+    <div class="eyebrow reveal" data-i18n="cmp.eyebrow">قبل / بعد</div>
+    <h2 class="reveal d1" data-i18n="cmp.h2">رحلة مواطن يطلب إعانة الحماية الاجتماعية… <span class="grad">اليوم مقابل تمكين</span></h2>
+    <p class="lead reveal d2" data-i18n="cmp.lead">نفس الخدمة، نفس اللجان، نفس القرار النهائي بيد الوزارة — الفرق في الطريق الذي يقطعه المواطن والموظف.</p>
+    <div class="cmp-grid">
+      <div class="jcard bad reveal d1">
+        <h3><i>📄</i><span data-i18n="cmp.today">اليوم (ورقي)</span></h3>
+        <div class="chips"><span class="chip" data-i18n="cmp.tc1">5 زيارات</span><span class="chip" data-i18n="cmp.tc2">+12 يوم</span><span class="chip" data-i18n="cmp.tc3">4 نسخ أوراق</span><span class="chip" data-i18n="cmp.tc4">طوابير انتظار</span></div>
+        <div class="jt">
+          <div class="s"><i>🚶</i><div><b data-i18n="cmp.t1">زيارة أولى للاستفسار</b><span data-i18n="cmp.t1s">معرفة الأوراق المطلوبة شفهياً</span></div></div>
+          <div class="s"><i>🖨️</i><div><b data-i18n="cmp.t2">تصوير المستندات</b><span data-i18n="cmp.t2s">4 نسخ من البطاقة والسكن والتعهد</span></div></div>
+          <div class="s"><i>⏳</i><div><b data-i18n="cmp.t3">زيارة ثانية للتقديم</b><span data-i18n="cmp.t3s">طابور + استلام وصل ورقي</span></div></div>
+          <div class="s"><i>❓</i><div><b data-i18n="cmp.t4">زيارات للمتابعة</b><span data-i18n="cmp.t4s">"راجعنا الأسبوع الجاي" × 2</span></div></div>
+          <div class="s"><i>📢</i><div><b data-i18n="cmp.t5">معرفة النتيجة</b><span data-i18n="cmp.t5s">من لوحة إعلانات أو بالهاتف إن حالفه الحظ</span></div></div>
+        </div>
+      </div>
+      <div class="jcard good reveal d2">
+        <span class="ribbon" data-i18n="cmp.ribbon">مع تمكين</span>
+        <h3><i>📱</i><span data-i18n="cmp.tamkeen">تمكين (إلكتروني)</span></h3>
+        <div class="chips"><span class="chip" data-i18n="cmp.kc1">0 زيارات</span><span class="chip" data-i18n="cmp.kc2">6 أيام</span><span class="chip" data-i18n="cmp.kc3">رفع من الموبايل</span><span class="chip" data-i18n="cmp.kc4">تتبع لحظي</span></div>
+        <div class="jt">
+          <div class="s"><i>📲</i><div><b data-i18n="cmp.k1">فتح التطبيق واختيار الخدمة</b><span data-i18n="cmp.k1s">قائمة المستندات واضحة مسبقاً</span></div></div>
+          <div class="s"><i>📸</i><div><b data-i18n="cmp.k2">تصوير المستندات بالكاميرا</b><span data-i18n="cmp.k2s">رفع مباشر، بدون نسخ ورقية</span></div></div>
+          <div class="s"><i>✅</i><div><b data-i18n="cmp.k3">تحقق آلي فوري</b><span data-i18n="cmp.k3s">رقم طلب ووصل إلكتروني خلال ثوانٍ</span></div></div>
+          <div class="s"><i>🔔</i><div><b data-i18n="cmp.k4">إشعار بموعد البحث الميداني</b><span data-i18n="cmp.k4s">الباحث يصل للبيت، المواطن لا يراجع</span></div></div>
+          <div class="s"><i>🏁</i><div><b data-i18n="cmp.k5">قرار اللجنة يصل كإشعار</b><span data-i18n="cmp.k5s">والإدراج بالرواتب يظهر في "طلباتي"</span></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="mrow reveal d3">
+      <h3 data-i18n="cmp.mT">وعلى جانب الوزارة</h3>
+      <div class="g">
+        <div class="c"><b>🗄️ <span data-i18n="cmp.m1">الأرشفة</span></b><div class="vs"><span class="o" data-i18n="cmp.m1o">ملفات ورقية ومخازن</span><em></em><span class="n" data-i18n="cmp.m1n">أرشيف رقمي قابل للبحث</span></div></div>
+        <div class="c"><b>📊 <span data-i18n="cmp.m2">التقارير</span></b><div class="vs"><span class="o" data-i18n="cmp.m2o">جداول يدوية نهاية الشهر</span><em></em><span class="n" data-i18n="cmp.m2n">لوحة قيادة لحظية لكل مديرية</span></div></div>
+        <div class="c"><b>👁️ <span data-i18n="cmp.m3">المراقبة</span></b><div class="vs"><span class="o" data-i18n="cmp.m3o">لا يُعرف أين توقف الطلب</span><em></em><span class="n" data-i18n="cmp.m3n">سجل تدقيق لكل خطوة وموظف</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SERVICES ================= -->
+<section id="services">
+  <div class="wrap">
+    <div class="eyebrow reveal" data-i18n="svc.eyebrow">الخدمات الـ12</div>
+    <h2 class="reveal d1" data-i18n="svc.h2">كتالوج الخدمات حسب الدائرة… <span class="grad2">كلها تُبنى من اللوحة بدون برمجة</span></h2>
+    <p class="lead reveal d2" data-i18n="svc.lead">كل خدمة موصوفة بنفس عناصر البناء على تمكين: دائرة مسؤولة + نموذج + مراحل + رسوم. الخدمات المجانية تبقى مجانية، والرسوم الرسمية تُحصَّل إلكترونياً لحساب الوزارة.</p>
+    <div class="svc-grid" id="svcGrid"></div>
+    <p style="color:var(--muted);font-size:13px;margin-top:22px" data-i18n="svc.note">* الحقول والمراحل والرسوم توضيحية مبنية على الإجراءات المعلنة؛ تُضبط نهائياً مع كل دائرة خلال مرحلة الحصر والتحليل.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div><b data-i18n="foot.1">إنجاز لتكنولوجيا المعلومات – بغداد · منصة تمكين</b></div>
+    <div class="sm" data-i18n="foot.2">ديمو تجريبي لأغراض العرض · جميع البيانات والأرقام افتراضية · الشعار الرسمي يُستبدل عند الاعتماد</div>
+  </div>
+</footer>
+
+<script>
+(function(){
+'use strict';
+const $=(s,r)=>(r||document).querySelector(s);
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+let LANG='ar';
+const CUR=()=>LANG==='en'?'IQD':(LANG==='ku'?'د.ع':'د.ع');
+const fmtN=n=>Math.round(n).toLocaleString('en-US');
+const money=n=>fmtN(n)+' '+CUR();
+const pad=n=>String(n).padStart(2,'0');
+const now=()=>{const d=new Date();return pad(d.getHours())+':'+pad(d.getMinutes())};
+const today=()=>{const d=new Date();return pad(d.getDate())+'/'+pad(d.getMonth()+1)};
+
+/* ================= SERVICE CATALOGUE (phone) ================= */
+const SERVICES=[
+ {id:'social',icon:'🤝',name:'إعانة الحماية الاجتماعية',short:'إعانة اجتماعية',dept:'هيئة الحماية الاجتماعية',fee:0,efee:0,
+  fields:[{k:'name',l:'الاسم الرباعي',v:'حيدر علي حسين محمد'},{k:'nid',l:'رقم البطاقة الوطنية',v:'199034567890'},{k:'status',l:'الحالة الاجتماعية',t:'sel',o:['أرملة','مطلّقة','عاجز عن العمل','أسرة بلا معيل','مسن']},{k:'fam',l:'عدد أفراد الأسرة',v:'5'},{k:'gov',l:'المحافظة',t:'sel',o:['بغداد – الرصافة','بغداد – الكرخ','البصرة','نينوى','ذي قار','أربيل']}],
+  docs:['صورة البطاقة الوطنية','بطاقة السكن','تعهد خطي'],
+  stages:['استلام الطلب','تحقق آلي','بحث اجتماعي ميداني','لجنة الشمول','إدراج بالرواتب']},
+ {id:'permit',icon:'🛂',name:'إجازة عمل للعمال الأجانب',short:'إجازة عمل أجانب',dept:'دائرة العمل – قسم عمل الأجانب',fee:100000,efee:5000,
+  fields:[{k:'emp',l:'اسم صاحب العمل / الشركة',v:'شركة الرافدين للمقاولات'},{k:'wname',l:'اسم العامل',v:'Rahul Kumar'},{k:'nat',l:'الجنسية',t:'sel',o:['الهند','بنغلاديش','باكستان','مصر','سوريا','نيبال']},{k:'job',l:'المهنة',v:'فني تبريد'},{k:'pass',l:'رقم الجواز',v:'Z4471920'}],
+  docs:['جواز السفر + الإقامة','عقد العمل','كتاب تأييد صاحب العمل'],
+  stages:['استلام الطلب','دفع الرسم','تدقيق','موافقة المدير','إصدار الإجازة إلكترونياً']},
+ {id:'job',icon:'💼',name:'تسجيل باحث عن عمل',short:'باحث عن عمل',dept:'دائرة العمل والتدريب المهني',fee:0,efee:0,
+  fields:[{k:'name',l:'الاسم الرباعي',v:'زينب كاظم جاسم'},{k:'nid',l:'رقم البطاقة الوطنية',v:'200145678901'},{k:'edu',l:'التحصيل الدراسي',t:'sel',o:['ابتدائية','إعدادية','دبلوم','بكالوريوس','ماجستير']},{k:'prof',l:'المهنة المطلوبة',v:'محاسبة'},{k:'gov',l:'المحافظة',t:'sel',o:['بغداد','البصرة','نينوى','كربلاء','النجف']}],
+  docs:['البطاقة الوطنية','السيرة الذاتية'],
+  stages:['استلام الطلب','تحقق','إدراج بقاعدة الباحثين','ترشيح لفرص عمل']},
+ {id:'ssec',icon:'🛡️',name:'تسجيل منشأة بالضمان الاجتماعي',short:'الضمان الاجتماعي',dept:'دائرة التقاعد والضمان الاجتماعي للعمال',fee:25000,efee:5000,
+  fields:[{k:'co',l:'اسم المنشأة',v:'معمل النور للألبان'},{k:'reg',l:'رقم السجل التجاري',v:'BG-88214'},{k:'wk',l:'عدد العمال',v:'42'},{k:'pay',l:'إجمالي الرواتب الشهرية (د.ع)',v:'31,500,000'}],
+  docs:['السجل التجاري','قائمة العمال','كشف الرواتب'],
+  stages:['استلام الطلب','تدقيق','احتساب الاشتراك','دفع','إصدار براءة ذمة']},
+ {id:'loan',icon:'💰',name:'قرض المشاريع الصغيرة',short:'قرض صغير',dept:'دائرة العمل – صندوق دعم المشاريع',fee:0,efee:2000,
+  fields:[{k:'name',l:'الاسم الرباعي',v:'مصطفى عادل خليل'},{k:'nid',l:'رقم البطاقة الوطنية',v:'198523456789'},{k:'proj',l:'وصف المشروع',v:'ورشة خياطة نسائية'},{k:'amt',l:'المبلغ المطلوب (د.ع)',t:'sel',o:['5,000,000','10,000,000','15,000,000','20,000,000']},{k:'guar',l:'اسم الكفيل',v:'موظف حكومي – أحمد سالم'}],
+  docs:['البطاقة الوطنية','دراسة جدوى مبسطة','تأييد الكفيل'],
+  stages:['استلام الطلب','تدقيق','لجنة القروض','موافقة','صرف عبر كي كارد']},
+ {id:'care',icon:'♿',name:'راتب المعين المتفرغ',short:'المعين المتفرغ',dept:'هيئة رعاية ذوي الإعاقة',fee:0,efee:0,
+  fields:[{k:'pname',l:'اسم ذي الإعاقة',v:'سجاد حسن علي'},{k:'cname',l:'اسم المعين',v:'حسن علي كريم (الأب)'},{k:'rel',l:'صلة القرابة',t:'sel',o:['أب','أم','أخ','أخت','زوج/زوجة']},{k:'gov',l:'المحافظة',t:'sel',o:['بغداد','بابل','ديالى','واسط','ميسان']}],
+  docs:['التقرير الطبي','البطاقة الوطنية (الطرفين)','بطاقة السكن'],
+  stages:['استلام الطلب','تدقيق','لجنة طبية (موعد)','قرار الشمول','إدراج']},
+ {id:'train',icon:'🎓',name:'التسجيل في التدريب المهني',short:'التدريب المهني',dept:'مراكز التدريب المهني',fee:0,efee:2000,
+  fields:[{k:'name',l:'الاسم الرباعي',v:'علي رعد جبار'},{k:'nid',l:'رقم البطاقة الوطنية',v:'200398765432'},{k:'ctr',l:'المركز',t:'sel',o:['مركز الرصافة','مركز الكرخ','مركز البصرة','مركز الموصل']},{k:'spec',l:'الاختصاص',t:'sel',o:['كهرباء','تبريد وتكييف','خياطة','حاسوب','لحام']}],
+  docs:['البطاقة الوطنية','صورة شخصية'],
+  stages:['استلام الطلب','قبول','حضور الدورة','إصدار شهادة QR']},
+ {id:'comp',icon:'⚖️',name:'شكوى عمالية',short:'شكوى عمالية',dept:'قسم علاقات العمل',fee:0,efee:0,
+  fields:[{k:'name',l:'اسم العامل',v:'كرار محمد عبد'},{k:'emp',l:'اسم صاحب العمل',v:'مطعم بابل'},{k:'subj',l:'موضوع الشكوى',t:'sel',o:['أجور متأخرة','فصل تعسفي','ساعات عمل زائدة','عدم تسجيل بالضمان']},{k:'ph',l:'رقم الهاتف',v:'0770 123 4567'}],
+  docs:['مستندات داعمة (اختياري)'],
+  stages:['استلام الطلب','إحالة للمفتش','جلسة توفيق (موعد)','قرار']}
+];
+const EXTRA_FIELDS=[{k:'altph',l:'رقم الهاتف البديل',v:'0780 000 0000'},{k:'email',l:'البريد الإلكتروني',v:'name@example.com'},{k:'addr',l:'عنوان السكن التفصيلي',v:'الكرادة – م 903 – ز 14 – د 22'},{k:'bank',l:'رقم بطاقة كي كارد للصرف',v:'•••• •••• •••• 4471'}];
+
+/* ================= STATE ================= */
+let S;
+let seq=4871;
+function seedReqs(){
+  const mk=(id,svc,stage,ts,name,paid)=>({id,svc,stage,ts,name,paid,log:[{t:'08:1'+id%10,m:'استلام الطلب',by:'النظام'}],seed:true});
+  return [
+    mk('ML-2026-04871','social',2,'09:12','حيدر علي حسين',0),
+    mk('ML-2026-04870','permit',4,'08:50','شركة الرافدين',105000),
+    mk('ML-2026-04869','ssec',1,'08:31','معمل النور للألبان',30000),
+    mk('ML-2026-04868','loan',2,'08:05','مصطفى عادل',2000),
+  ];
+}
+function initState(){
+  seq=4871;
+  S={view:'home',tab:'home',svc:null,step:0,data:{},docs:{},pay:'qi',reqs:seedReqs(),curReq:null,
+     kpi:{today:128,fees:1245000,pending:37,done:84},
+     adminTab:'dash',adminSel:null,builderSvc:'permit',extras:{}};
+}
+initState();
+const svcOf=id=>SERVICES.find(s=>s.id===id);
+const total=s=>s.fee+s.efee;
+const fieldsOf=s=>s.fields.concat(EXTRA_FIELDS.filter(f=>(S.extras[s.id]||[]).includes(f.k)));
+const isDone=r=>r.stage>=svcOf(r.svc).stages.length-1;
+
+/* ================= PHONE ================= */
+const screen=$('#screen');
+const NAV=[['home','🏠','الرئيسية'],['services','▦','الخدمات'],['news','📰','الأخبار'],['reqs','📑','الطلبات'],['me','👤','حسابي']];
+function navHTML(active){
+  return '<div class="sc-nav">'+NAV.map(n=>`<div class="${active===n[0]?'on':''}" data-nav="${n[0]}"><i>${n[1]}</i>${n[2]}</div>`).join('')+'</div>';
+}
+function gridHTML(){
+  return '<div class="sc-grid">'+SERVICES.map(s=>`<div class="it" data-svc="${s.id}"><div class="bx">${s.icon}</div><b>${s.short}</b></div>`).join('')+'</div>';
+}
+function brand(){return `<div class="sc-brand"><img src="iraq_emblem.png" alt=""><div><b>وزارة العمل والشؤون الاجتماعية</b><small>جمهورية العراق · منصة تمكين</small></div></div>`}
+function title(t,back){return `<div class="sc-title"><i data-back="${back}">›</i>${t}</div>`}
+function feeHTML(s){
+  if(total(s)===0) return `<div class="fee free"><div class="r"><span>رسم الوزارة الرسمي</span><span>0 د.ع</span></div><div class="r"><span>أجور الخدمة الإلكترونية</span><span>0 د.ع</span></div><div class="r t"><span>الإجمالي</span><b>بدون رسوم ✓</b></div></div>`;
+  return `<div class="fee"><div class="r"><span>رسم الوزارة الرسمي</span><span>${fmtN(s.fee)} د.ع</span></div><div class="r"><span>أجور الخدمة الإلكترونية</span><span>${fmtN(s.efee)} د.ع</span></div><div class="r t"><span>الإجمالي</span><b>${fmtN(total(s))} د.ع</b></div></div>`;
+}
+function stepsHTML(n){
+  const L=['البيانات','المرفقات','مراجعة ودفع'];
+  return `<div class="steps-lbl">${L.map((l,i)=>i===n?`<b>${l}</b>`:`<span>${l}</span>`).join('')}</div><div class="steps">${L.map((_,i)=>`<i class="${i<=n?'on':''}"></i>`).join('')}</div>`;
+}
+function pillFor(r){const s=svcOf(r.svc);return isDone(r)?`<em class="ok">${s.stages[r.stage]}</em>`:`<em>${s.stages[r.stage]}</em>`}
+function trackHTML(r){
+  const s=svcOf(r.svc);
+  return `<div class="trk"><div class="no">${r.id} ${pillFor(r)}</div><h4>${s.name}</h4>`+
+    s.stages.map((st,i)=>{
+      const cls=i<r.stage?'':(i===r.stage?(isDone(r)?'':'pend'):'wait');
+      const sub=i<r.stage?`${today()} · ${r.log[i]?r.log[i].t:r.ts}`:(i===r.stage?(isDone(r)?`${today()} · ${now()} ✓`:'جارٍ الآن'):'—');
+      return `<div class="st ${cls}"><i>${i<r.stage||(i===r.stage&&isDone(r))?'✓':''}</i><div><b>${st}</b><span>${sub}</span></div></div>`;
+    }).join('')+'</div>';
+}
+function render(){
+  const v=S.view; let h=''; let nav=S.tab;
+  if(v==='home'){
+    h=brand()+`<div class="sc-top"><div class="hi">أهلاً حيدر 👋<small>${new Date().toLocaleDateString('ar-IQ',{weekday:'long',day:'numeric',month:'long'})}</small></div><div class="ico"><i class="${S.reqs.some(r=>!r.seed)?'dot':''}" data-nav="reqs">🔔</i></div></div>
+      <div class="sc-search">🔍 ابحث عن خدمة...</div><div class="scroll" style="top:132px"><div class="sc-h">الخدمات الإلكترونية <span data-nav="services">عرض الكل ›</span></div>${gridHTML()}
+      ${S.reqs.filter(r=>!r.seed).slice(0,1).map(r=>`<div class="sc-h">آخر طلباتك</div><div class="req-card" data-req="${r.id}"><i>${svcOf(r.svc).icon}</i><div><b>${svcOf(r.svc).name}</b><span>${r.id}</span></div>${pillFor(r)}</div>`).join('')}
+      </div>`;
+  } else if(v==='services'){
+    h=title('جميع الخدمات','home')+`<div class="scroll" style="top:84px">${gridHTML()}</div>`;
+  } else if(v==='news'){
+    h=title('أخبار الوزارة','home')+`<div class="scroll" style="top:84px">
+      <div class="news"><div class="img"></div><div><b>إطلاق الدفعة الجديدة لرواتب الحماية الاجتماعية</b><span>اليوم · هيئة الحماية الاجتماعية</span></div></div>
+      <div class="news"><div class="img b"></div><div><b>فتح باب التسجيل في دورات التدريب المهني للفصل القادم</b><span>أمس · مراكز التدريب</span></div></div>
+      <div class="news"><div class="img c"></div><div><b>تنبيه لأصحاب العمل: تجديد إجازات العمال الأجانب إلكترونياً</b><span>قبل 3 أيام · دائرة العمل</span></div></div></div>`;
+  } else if(v==='reqs'){
+    const mine=S.reqs.filter(r=>!r.seed);
+    h=title('طلباتي','home')+`<div class="scroll" style="top:84px">`+(mine.length?mine.map(r=>`<div class="req-card" data-req="${r.id}"><i>${svcOf(r.svc).icon}</i><div><b>${svcOf(r.svc).name}</b><span>${r.id} · ${today()} ${r.ts}</span></div>${pillFor(r)}</div>`).join(''):`<div class="empty"><i>📭</i>لا توجد طلبات بعد<br>اختر خدمة من الرئيسية وقدّم طلبك الأول</div>`)+'</div>';
+  } else if(v==='me'){
+    h=title('حسابي','home')+`<div class="scroll" style="top:84px"><div class="prof"><div class="av">👤</div><b>حيدر علي حسين محمد</b><span>موثّق عبر البطاقة الوطنية الموحدة ✓</span>
+      <div class="row" style="margin-top:10px"><span>رقم البطاقة</span><b>1990•••••890</b></div><div class="row"><span>الهاتف</span><b>0770 •••• 567</b></div><div class="row"><span>المحافظة</span><b>بغداد – الرصافة</b></div><div class="row"><span>اللغة</span><b>العربية</b></div></div>
+      <div class="sc-btn ghost">تحديث بياناتي</div></div>`;
+  } else if(v==='form'){
+    const s=svcOf(S.svc); nav=null;
+    if(S.step===0){
+      h=title(s.name,'home')+stepsHTML(0)+`<div class="scroll" style="top:124px">`+fieldsOf(s).map(f=>{
+        const nw=(S.extras[s.id]||[]).includes(f.k)?' new':'';
+        if(f.t==='sel') return `<div class="fld${nw}"><label>${f.l}</label><select data-f="${f.k}">${f.o.map(o=>`<option ${S.data[f.k]===o?'selected':''}>${o}</option>`).join('')}</select></div>`;
+        return `<div class="fld${nw}"><label>${f.l}</label><input data-f="${f.k}" value="${esc(S.data[f.k]??f.v)}"></div>`;
+      }).join('')+`<div class="sc-btn" data-act="next">التالي ›</div><div style="height:10px"></div></div>`;
+    } else if(S.step===1){
+      h=title(s.name,'home')+stepsHTML(1)+`<div class="scroll" style="top:124px"><div class="fld"><label>المستندات المطلوبة — اضغط لرفع صورة (محاكاة)</label></div>`+
+        s.docs.map((d,i)=>`<div class="fld"><div class="up ${S.docs[i]?'done':''}" data-doc="${i}">${d}<span>${S.docs[i]?'✓ تم الرفع':'📎 رفع'}</span></div></div>`).join('')+
+        `<div class="hint" style="margin:4px 16px 10px">يتم التحقق من البطاقة الوطنية آلياً عبر الربط مع الجهات المعنية عند التكامل.</div>
+        <div class="sc-btn ${Object.keys(S.docs).length<s.docs.length?'dis':''}" data-act="next">التالي ›</div><div class="sc-btn ghost" data-act="back">‹ رجوع</div><div style="height:10px"></div></div>`;
+    } else {
+      h=title('مراجعة ودفع','home')+stepsHTML(2)+`<div class="scroll" style="top:124px"><div class="rev">`+fieldsOf(s).slice(0,4).map(f=>`<div class="r"><span>${f.l}</span><b>${esc(S.data[f.k]??(f.t==='sel'?f.o[0]:f.v))}</b></div>`).join('')+`<div class="r"><span>المرفقات</span><b>${s.docs.length} ملفات ✓</b></div></div>`+feeHTML(s)+
+        (total(s)>0?`<div class="fld"><label>وسيلة الدفع</label></div><div class="pay">${[['qi','💳','كي كارد'],['zain','📱','زين كاش'],['mc','🌐','ماستر كارد']].map(p=>`<div class="${S.pay===p[0]?'on':''}" data-pay="${p[0]}"><i>${p[1]}</i>${p[2]}</div>`).join('')}</div><div class="sc-btn" data-act="pay">ادفع ${fmtN(total(s))} د.ع وقدّم الطلب</div>`:`<div class="sc-btn" data-act="pay">تقديم الطلب (بدون رسوم)</div>`)+
+        `<div class="sc-btn ghost" data-act="back">‹ رجوع</div><div style="height:10px"></div></div>`;
+    }
+  } else if(v==='paying'){
+    nav=null; const s=svcOf(S.svc);
+    h=title('جارٍ المعالجة','')+`<div class="paying"><div class="spin"></div><b>${total(s)>0?'جارٍ تأكيد الدفع مع بوابة الدفع…':'جارٍ تسجيل الطلب والتحقق الآلي…'}</b><br><span style="color:#8a94a6">لا تغلق التطبيق</span></div>`;
+  } else if(v==='success'){
+    const r=S.curReq, s=svcOf(r.svc); nav=null;
+    h=title('تم التقديم بنجاح','home')+`<div class="scroll" style="top:84px"><div class="rcpt"><div class="ok">✓</div><b>تم استلام طلبك</b><span style="color:#8a94a6;font-size:9.5px">${s.name}</span><div class="amt">${r.paid>0?fmtN(r.paid)+' د.ع':'بدون رسوم'}</div>
+      <div class="row"><span>رقم الطلب</span><b>${r.id}</b></div><div class="row"><span>التاريخ</span><b>${today()} · ${r.ts}</b></div>${r.paid>0?`<div class="row"><span>رسم الوزارة الرسمي</span><b>${fmtN(s.fee)} د.ع</b></div><div class="row"><span>أجور الخدمة الإلكترونية</span><b>${fmtN(s.efee)} د.ع</b></div><div class="row"><span>وسيلة الدفع</span><b>${{qi:'كي كارد',zain:'زين كاش',mc:'ماستر كارد'}[r.pm]}</b></div><div class="row"><span>رقم الوصل</span><b>RC-${r.id.slice(-5)}-${Math.floor(Math.random()*900+100)}</b></div>`:''}
+      <div class="qr"></div><span style="font-size:8.5px;color:#8a94a6">وصل إلكتروني معتمد · يمكن التحقق منه عبر QR</span></div>
+      <div class="sc-btn" data-req="${r.id}">تتبّع الطلب</div><div class="sc-btn ghost" data-nav="home">الرئيسية</div><div style="height:10px"></div></div>`;
+  } else if(v==='track'){
+    const r=S.curReq; nav='reqs';
+    h=title('تتبّع الطلب','reqs')+`<div class="scroll" style="top:84px">${trackHTML(r)}
+      <div class="trk" style="padding:10px 14px"><div class="no">سجل الطلب</div>${r.log.slice().reverse().map(l=>`<div class="st" style="padding-bottom:6px"><i style="width:8px;height:8px;margin:5px 6px 0;background:#b9c3d3"></i><div><b style="font-size:9.5px">${l.m}</b><span>${l.t} · ${l.by}</span></div></div>`).join('')}</div>
+      ${isDone(r)?`<div class="hint" style="margin:0 16px 10px;background:#eaf7f0;border-color:#b7e2cb;color:#2f7a52">🎉 اكتمل طلبك. ${r.svc==='permit'?'يمكنك تنزيل الإجازة الإلكترونية بصيغة PDF مع QR.':'ستصلك التفاصيل عبر الإشعارات.'}</div>`:''}
+      <div style="height:10px"></div></div>`;
+  }
+  screen.classList.toggle('nonav',!nav);
+  screen.innerHTML=h+(nav?navHTML(nav):'')+`<div class="toast" id="toast"><i>🔔</i><div><b></b><span></span></div></div>`;
+}
+let toastT;
+function toast(t,s){
+  const el=$('#toast'); if(!el) return;
+  $('b',el).textContent=t; $('span',el).textContent=s||'وزارة العمل والشؤون الاجتماعية';
+  el.classList.add('show'); clearTimeout(toastT); toastT=setTimeout(()=>el.classList.remove('show'),3200);
+}
+function go(view,tab){S.view=view; if(tab!==undefined) S.tab=tab; render();}
+screen.addEventListener('click',e=>{
+  const t=e.target.closest('[data-nav],[data-svc],[data-back],[data-act],[data-doc],[data-pay],[data-req]');
+  if(!t) return;
+  if(t.dataset.nav){go(t.dataset.nav,t.dataset.nav);return;}
+  if(t.dataset.svc){S.svc=t.dataset.svc;S.step=0;S.data={};S.docs={};S.pay='qi';go('form');return;}
+  if(t.dataset.back!==undefined){if(t.dataset.back) go(t.dataset.back,t.dataset.back==='reqs'?'reqs':'home');return;}
+  if(t.dataset.doc){S.docs[t.dataset.doc]=1;render();return;}
+  if(t.dataset.pay){S.pay=t.dataset.pay;render();return;}
+  if(t.dataset.req){S.curReq=S.reqs.find(r=>r.id===t.dataset.req);go('track','reqs');return;}
+  if(t.dataset.act==='next'){S.step++;render();return;}
+  if(t.dataset.act==='back'){S.step--;render();return;}
+  if(t.dataset.act==='pay'){submit();return;}
+});
+screen.addEventListener('input',e=>{if(e.target.dataset.f) S.data[e.target.dataset.f]=e.target.value;});
+screen.addEventListener('change',e=>{if(e.target.dataset.f) S.data[e.target.dataset.f]=e.target.value;});
+
+function submit(){
+  const s=svcOf(S.svc);
+  go('paying');
+  setTimeout(()=>{
+    seq++;
+    // stages like "دفع الرسم" / "تحقق آلي" complete automatically at submission
+    const auto=/دفع|تحقق/.test(s.stages[1]);
+    const r={id:'ML-2026-0'+seq,svc:s.id,stage:auto?2:1,ts:now(),name:S.data[s.fields[0].k]??s.fields[0].v,paid:total(s),pm:S.pay,seed:false,
+      log:[{t:now(),m:'استلام الطلب',by:'التطبيق'}]};
+    if(total(s)>0) r.log.push({t:now(),m:'تأكيد الدفع · '+fmtN(total(s))+' د.ع · '+{qi:'كي كارد',zain:'زين كاش',mc:'ماستر كارد'}[S.pay],by:'بوابة الدفع'});
+    r.log.push({t:now(),m:auto?s.stages[1]+' ✓':'إحالة إلى: '+s.stages[1],by:'النظام'});
+    S.reqs.unshift(r); S.curReq=r;
+    S.kpi.today++; S.kpi.fees+=s.fee+s.efee; S.kpi.pending++;
+    S.adminSel=r.id; S.newId=r.id; S.adminTab='dash';
+    go('success'); renderAdmin(true);
+    setTimeout(()=>toast('تم استلام طلبك '+r.id,'سيتم إشعارك عند كل مرحلة'),500);
+  },1600);
+}
+
+/* ================= ADMIN ================= */
+const dash=$('#dash');
+function stagePill(r){const s=svcOf(r.svc);const st=s.stages[r.stage];return isDone(r)?`<span class="pill g">${st}</span>`:(r.stage<=1?`<span class="pill b">${st}</span>`:`<span class="pill y">${st}</span>`)}
+function renderAdmin(bump){
+  const k=S.kpi; let body='';
+  const tabs=`<div class="tabs">${[['dash','📊 لوحة التحكم'],['detail','📄 تفاصيل الطلب'],['builder','🧩 منشئ الخدمة']].map(t=>`<div class="${S.adminTab===t[0]?'on':''}" data-tab="${t[0]}">${t[1]}</div>`).join('')}</div>`;
+  const head=`<div class="dh"><img src="iraq_emblem.png" alt=""><div><b>وزارة العمل والشؤون الاجتماعية</b><small>لوحة الإدارة · منصة تمكين · مديرية بغداد</small></div><div class="usr"><i>م</i>م. مدير الوحدة الإلكترونية</div></div>`;
+  if(S.adminTab==='dash'){
+    body=`<div class="kpis">
+      <div class="kpi ${bump?'bump':''}" style="--k:#0f7a5a"><div><b>${fmtN(k.today)}</b><span>طلبات اليوم</span></div><i>📥</i></div>
+      <div class="kpi ${bump?'bump':''}" style="--k:#f5b942"><div><b>${fmtN(k.fees)} د.ع</b><span>رسوم اليوم المحصّلة</span></div><i>💵</i></div>
+      <div class="kpi ${bump?'bump':''}" style="--k:#8b5cf6"><div><b>${fmtN(k.pending)}</b><span>قيد التدقيق</span></div><i>🕒</i></div>
+      <div class="kpi" style="--k:#22d3ee"><div><b>${fmtN(k.done)}</b><span>منجزة اليوم</span></div><i>✅</i></div></div>
+      <div class="tbl-wrap"><table class="tbl"><tr><th>رقم الطلب</th><th>الخدمة</th><th>مقدّم الطلب</th><th>الرسوم</th><th>المرحلة</th><th>الوقت</th></tr>`+
+      S.reqs.map(r=>`<tr class="row ${S.adminSel===r.id?'sel':''} ${S.newId===r.id?'new':''}" data-row="${r.id}"><td><b>${r.id}</b>${S.newId===r.id?'<span class="badge-new">جديد</span>':''}</td><td>${svcOf(r.svc).icon} ${svcOf(r.svc).short}</td><td>${esc(r.name)}</td><td>${r.paid?fmtN(r.paid)+' د.ع':'<span style="color:#2f7a52">مجاني</span>'}</td><td>${stagePill(r)}</td><td>${r.ts}</td></tr>`).join('')+
+      `</table></div><div class="hint">💡 اضغط على أي صف لفتح تفاصيل الطلب واعتماده. الطلبات الجديدة من التطبيق تظهر هنا فوراً.</div>`;
+  } else if(S.adminTab==='detail'){
+    const r=S.reqs.find(x=>x.id===S.adminSel)||S.reqs[0]; const s=svcOf(r.svc); S.adminSel=r.id;
+    const done=isDone(r);
+    body=`<div class="det"><div class="box"><h6>${r.id} ${stagePill(r)}</h6>
+      <div class="kv"><span>الخدمة</span><b>${s.name}</b></div><div class="kv"><span>الدائرة</span><b>${s.dept}</b></div><div class="kv"><span>مقدّم الطلب</span><b>${esc(r.name)}</b></div><div class="kv"><span>تاريخ التقديم</span><b>${today()} · ${r.ts}</b></div>
+      <div class="kv"><span>الرسم الرسمي</span><b>${fmtN(s.fee)} د.ع</b></div><div class="kv"><span>أجور إلكترونية</span><b>${fmtN(s.efee)} د.ع</b></div><div class="kv"><span>حالة الدفع</span><b style="color:#2f7a52">${r.paid?'مدفوع ✓':'لا ينطبق'}</b></div>
+      <b style="font-size:10px;display:block;margin-top:8px;color:#5c6677">المرفقات</b><div class="att">${s.docs.map(d=>`<span>📎 ${d}</span>`).join('')}</div></div>
+      <div class="box"><h6>سير العمل</h6><div class="stg">${s.stages.map((st,i)=>`<div class="${i<r.stage||(done&&i===r.stage)?'done':(i===r.stage?'cur':'')}">${st}</div>`).join('')}</div>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin:10px 0">${done?`<button class="dbtn gold dis">✓ مكتمل – ${s.stages[r.stage]}</button>`:`<button class="dbtn" data-adv="${r.id}">✓ اعتماد / نقل للمرحلة التالية: ${s.stages[r.stage+1]}</button>`}<button class="dbtn ghost" data-tab="dash">‹ رجوع للجدول</button></div>
+      <b style="font-size:10px;display:block;margin-bottom:4px;color:#5c6677">سجل التدقيق</b><div class="log">${r.log.slice().reverse().map(l=>`<div><b>${l.t}</b><span>${l.m}</span><span style="color:#9aa3b5;margin-inline-start:auto">${l.by}</span></div>`).join('')}</div></div></div>`;
+  } else {
+    const s=svcOf(S.builderSvc); const ex=S.extras[s.id]||[];
+    body=`<div class="builder"><div class="pal"><b class="t">عناصر النموذج (اسحب وأفلت)</b>${['🔤 حقل نص','🔢 رقم','📅 تاريخ','☑️ قائمة اختيار','📎 رفع ملف','🪪 البطاقة الوطنية (تحقق آلي)','📍 الموقع الجغرافي','✍️ توقيع/تعهد','💳 خطوة دفع'].map(x=>`<div draggable="true">${x}</div>`).join('')}</div>
+      <div class="cv"><select class="sel-svc" data-bsvc>${SERVICES.map(x=>`<option value="${x.id}" ${x.id===s.id?'selected':''}>${x.icon} ${x.name}</option>`).join('')}</select>
+      <b class="t">النموذج كما يراه المواطن</b>${fieldsOf(s).map(f=>`<div class="f ${ex.includes(f.k)?'ex':''}"><span class="h">⋮⋮</span><span style="flex:1;color:#1b2430">${f.l}</span><span>${f.t==='sel'?'قائمة':'نص'}</span></div>`).join('')}
+      ${s.docs.map(d=>`<div class="f"><span class="h">⋮⋮</span><span style="flex:1;color:#1b2430">${d}</span><span>مرفق</span></div>`).join('')}
+      ${total(s)>0?`<div class="f pay"><span class="h">⋮⋮</span><span style="flex:1;color:#1b2430">خطوة الدفع: ${fmtN(s.fee)} رسم + ${fmtN(s.efee)} أجور</span><span>دفع</span></div>`:''}
+      <b class="t" style="margin-top:8px">المراحل</b><div class="stg">${s.stages.map(x=>`<div class="done">${x}</div>`).join('')}</div></div>
+      <div class="props"><b class="t">حقول إضافية — فعّلها وشاهدها بالتطبيق</b>${EXTRA_FIELDS.map(f=>`<div class="tog ${ex.includes(f.k)?'on':''}" data-tog="${f.k}"><span>${f.l}</span><span class="sw"></span></div>`).join('')}
+      <div class="hint">كل تغيير هنا ينعكس فوراً على نموذج الخدمة في تطبيق المواطن — بدون إصدار نسخة جديدة من التطبيق وبدون برمجة.</div>
+      <button class="dbtn" style="margin-top:8px;width:100%" data-open="${s.id}">📱 افتح هذه الخدمة بالتطبيق</button></div></div>`;
+  }
+  dash.innerHTML=head+tabs+body;
+  if(bump) setTimeout(()=>dash.querySelectorAll('.kpi.bump').forEach(x=>x.classList.remove('bump')),600);
+  if(S.newId) setTimeout(()=>{S.newId=null},3000);
+}
+dash.addEventListener('click',e=>{
+  const t=e.target.closest('[data-tab],[data-row],[data-adv],[data-tog],[data-open]');
+  if(!t) return;
+  if(t.dataset.tab){S.adminTab=t.dataset.tab;renderAdmin();return;}
+  if(t.dataset.row){S.adminSel=t.dataset.row;S.adminTab='detail';S.newId=null;renderAdmin();return;}
+  if(t.dataset.adv){advance(t.dataset.adv);return;}
+  if(t.dataset.tog){const ex=S.extras[S.builderSvc]=S.extras[S.builderSvc]||[];const i=ex.indexOf(t.dataset.tog);i>=0?ex.splice(i,1):ex.push(t.dataset.tog);renderAdmin();
+    if(S.view==='form'&&S.svc===S.builderSvc){render();} else if(i<0){toast('تم تحديث نموذج '+svcOf(S.builderSvc).short,'حقل جديد: '+EXTRA_FIELDS.find(f=>f.k===t.dataset.tog).l);} return;}
+  if(t.dataset.open){S.svc=t.dataset.open;S.step=0;S.data={};S.docs={};go('form');document.getElementById('live').scrollIntoView({behavior:'smooth',block:'center'});return;}
+});
+dash.addEventListener('change',e=>{if(e.target.dataset.bsvc!==undefined){S.builderSvc=e.target.value;renderAdmin();}});
+function advance(id){
+  const r=S.reqs.find(x=>x.id===id); const s=svcOf(r.svc);
+  if(isDone(r)) return;
+  r.stage++; const st=s.stages[r.stage];
+  r.log.push({t:now(),m:(isDone(r)?'إنجاز: ':'اعتماد ونقل إلى: ')+st,by:'م. مدير الوحدة'});
+  if(isDone(r)){S.kpi.done++;S.kpi.pending=Math.max(0,S.kpi.pending-1);}
+  renderAdmin(isDone(r));
+  if(!r.seed){
+    if(S.view==='track'&&S.curReq&&S.curReq.id===r.id) render();
+    else if(S.view==='reqs'||S.view==='home') render();
+    toast(isDone(r)?'🎉 اكتمل طلبك '+r.id:'تحديث على طلبك '+r.id, isDone(r)?st:'انتقل الطلب إلى مرحلة: '+st);
+  }
+}
+$('#resetBtn').addEventListener('click',()=>{initState();render();renderAdmin();});
+
+/* ================= CALCULATOR ================= */
+const ids=['Tx','Pct','Efee','Fee'];
+const cur={}; const prev={oEfee:0,oFee:0,oHrs:0,oVis:0};
+ids.forEach(k=>{
+  const n=$('#n'+k),r=$('#r'+k);
+  const sync=(v)=>{v=Math.max(+r.min,Math.min(+r.max*(k==='Pct'?1:3),+v||0));n.value=v;r.value=Math.min(v,+r.max);calc();};
+  n.addEventListener('input',()=>sync(n.value)); r.addEventListener('input',()=>sync(r.value));
+});
+function animNum(id,to,suffix){
+  const el=$('#'+id),from=prev[id]||0,t0=performance.now(),d=700;
+  const step=t=>{const p=Math.min(1,(t-t0)/d),e=1-Math.pow(1-p,3);const v=from+(to-from)*e;el.innerHTML=fmtN(v)+(suffix?` <small>${suffix}</small>`:'');if(p<1)requestAnimationFrame(step);else prev[id]=to;};
+  requestAnimationFrame(step);
+}
+const RAMP=[.12,.22,.35,.5,.68,.85,1,1,1,1,1,1];
+function calc(){
+  const N=+$('#nTx').value,P=+$('#nPct').value/100,E=+$('#nEfee').value,F=+$('#nFee').value;
+  const e=N*P, eRev=e*E, fRev=e*F, hrs=e*25/60, vis=e*3;
+  animNum('oEfee',eRev,CUR()); animNum('oFee',fRev,CUR()); animNum('oHrs',hrs,T('calc.hrs')); animNum('oVis',vis,T('calc.visits'));
+  const monthly=(eRev+fRev)/12, max=monthly||1;
+  const bars=$('#bars');
+  if(!bars.children.length){bars.innerHTML=RAMP.map(()=>'<div></div>').join('');$('#mths').innerHTML=RAMP.map((_,i)=>`<span>${i+1}</span>`).join('');}
+  [...bars.children].forEach((b,i)=>{const v=monthly*RAMP[i];b.style.height=(v/max*100)+'%';b.dataset.v=fmtN(v)+' '+CUR();});
+}
+
+/* ================= SERVICES CATALOGUE ================= */
+const CAT=[
+ ['🤝','إعانة الحماية الاجتماعية','هيئة الحماية الاجتماعية',['البطاقة الوطنية','الحالة الاجتماعية','عدد الأفراد','بطاقة السكن','تعهد'],'استلام ← تحقق آلي ← بحث اجتماعي ميداني ← لجنة الشمول ← إدراج بالرواتب','free','بدون رسم رسمي · أجور إلكترونية صفر'],
+ ['💼','تسجيل الباحثين عن عمل','دائرة العمل والتدريب المهني',['البطاقة الوطنية','التحصيل الدراسي','المهنة','السيرة الذاتية','المحافظة'],'استلام ← تحقق ← إدراج بقاعدة الباحثين ← ترشيح لفرص عمل','free','بدون رسم'],
+ ['🛂','إجازة عمل للعمال الأجانب','دائرة العمل – قسم عمل الأجانب',['صاحب العمل','بيانات العامل','الجنسية','المهنة','الجواز والإقامة','عقد العمل'],'استلام ← دفع الرسم ← تدقيق ← موافقة المدير ← إصدار الإجازة إلكترونياً','fee-tag','رسم رسمي 100% للوزارة + أجور إلكترونية'],
+ ['🛡️','تسجيل واشتراك الضمان الاجتماعي','دائرة التقاعد والضمان الاجتماعي للعمال',['بيانات المنشأة','قائمة العمال','الرواتب','السجل التجاري'],'استلام ← تدقيق ← احتساب الاشتراك ← دفع ← براءة ذمة','fee-tag','اشتراكات شهرية تُحصَّل إلكترونياً'],
+ ['♿','راتب المعين المتفرغ / شمول ذوي الإعاقة','هيئة رعاية ذوي الإعاقة',['بيانات المعاق','بيانات المعين','التقرير الطبي','البطاقة الوطنية'],'استلام ← تدقيق ← لجنة طبية (موعد) ← قرار الشمول ← إدراج','free','بدون رسم'],
+ ['💰','قرض المشاريع الصغيرة المدرة للدخل','دائرة العمل – صندوق دعم المشاريع',['البطاقة الوطنية','وصف المشروع','المبلغ','الكفيل','دراسة جدوى'],'استلام ← تدقيق ← لجنة القروض ← موافقة ← صرف عبر كي كارد','free','بدون رسم · الصرف والأقساط إلكترونياً'],
+ ['🎓','التسجيل في دورات التدريب المهني','مراكز التدريب المهني',['البطاقة الوطنية','المركز','الاختصاص','الفترة'],'استلام ← قبول ← حضور ← شهادة بـ QR','free','بدون رسم أو رسم رمزي'],
+ ['🏢','إجازة شركة توظيف / مكتب تشغيل خاص','دائرة العمل والتدريب المهني',['السجل التجاري','المدير المفوض','العنوان','الكفالة'],'استلام ← دفع الرسم ← تدقيق ← كشف موقعي ← إصدار الإجازة','fee-tag','رسم رسمي + أجور إلكترونية'],
+ ['⚖️','شكوى عمالية / نزاع عمل','قسم علاقات العمل',['بيانات العامل','صاحب العمل','موضوع الشكوى','مستندات'],'استلام ← إحالة للمفتش ← جلسة توفيق (موعد) ← قرار','free','بدون رسم'],
+ ['🏗️','تفتيش السلامة المهنية / شهادة سلامة','المركز الوطني للصحة والسلامة المهنية',['بيانات المنشأة','عدد العمال','نوع النشاط'],'استلام ← دفع ← جدولة الزيارة ← تقرير التفتيش ← الشهادة','fee-tag','رسم رسمي + أجور إلكترونية'],
+ ['👶','طلب إيداع / رعاية في دور الدولة','دائرة رعاية ذوي الاحتياجات الخاصة',['بيانات الطفل / المسن','ولي الأمر','تقرير اجتماعي','مستندات'],'استلام ← بحث اجتماعي ← لجنة ← قرار الإيداع','free','بدون رسم'],
+ ['🔄','تحديث بيانات المستفيد / استعلام عن الراتب','هيئة الحماية الاجتماعية',['رقم المستفيد','البطاقة الوطنية','البيانات الجديدة'],'استلام ← تحقق آلي ← تحديث ← إشعار','free','بدون رسم · يوفّر ملايين المراجعات'],
+];
+$('#svcGrid').innerHTML=CAT.map((c,i)=>`<div class="svc reveal d${i%4+1}"><h3><i>${c[0]}</i>${c[1]}</h3><div class="dep">${c[2]}</div><div class="ch">${c[3].map(x=>`<span>${x}</span>`).join('')}</div><div class="stg2">${c[4]}</div><div class="${c[5]}">${c[5]==='free'?'✓ ':'💳 '}${c[6]}</div></div>`).join('');
+
+/* ================= I18N ================= */
+const I18N={
+ar:{
+ 'calc.hrs':'ساعة','calc.visits':'زيارة'
+},
+ku:{
+ brand:'وەزارەتی کار و کاروباری کۆمەڵایەتی',brandSub:'دیمۆی پلاتفۆرمی تەمکین · ئینجاز',
+ 'nav.live':'دیمۆی زیندوو','nav.calc':'ژمێرەری داهات','nav.compare':'پێش / پاش','nav.services':'خزمەتگوزارییەکان',
+ 'hero.eyebrow':'دیمۆی زیندووی کارلێکەر · وەزارەتی کار و کاروباری کۆمەڵایەتی',
+ 'hero.h1':'خزمەتگوزارییەکانی وەزارەت<br>پێشکەش و پەسەند دەکرێن<br><span class="grad">لەبەرچاوت ئێستا</span>',
+ 'hero.lead':'ئەم لاپەڕەیە پێشکەشکردن نییە؛ نموونەیەکی کارایە لە پلاتفۆرمی <b style="color:#fff">تەمکین</b>ی ئینجاز: داواکاری لە ئەپی هاوڵاتییەوە پێشکەش بکە، باج بە ئەلیکترۆنی بدە، پاشان لە داشبۆردی وەزارەتەوە پەسەندی بکە و ببینە نوێکارییەکە دەستبەجێ دەگاتە هاوڵاتی.',
+ 'hero.btn1':'دیمۆی زیندوو تاقی بکەرەوە','hero.btn2':'ژمێرەری داهات',
+ 'hero.s1':'تێچووی دروستکردن لەسەر وەزارەت','hero.s2':'خزمەتگوزاری نموونەیی لە فەرمانگەکانی وەزارەت','hero.s3':'لە باجی فەرمی بۆ هەژماری وەزارەت',
+ 'live.eyebrow':'دیمۆی زیندووی کارلێکەر','live.h2':'هاوڵاتی پێشکەش دەکات… <span class="grad">و وەزارەت پەسەند دەکات… لەسەر هەمان شاشە</span>',
+ 'live.lead':'هەموو ئەوەی لێرە دەیبینیت بەڕاستی لەناو لاپەڕەکە کار دەکات: ئەپەکە ئەوەیە هاوڵاتی دەیبینێت، داشبۆردەکە ئەوەیە فەرمانبەری وەزارەت دەیبینێت. داواکارییەک لە مۆبایلەوە پێشکەش بکە و داشبۆرد نوێ دەبێتەوە، پاشان لە داشبۆردەوە پەسەندی بکە و مۆبایل ئاگادارکردنەوە وەردەگرێت.',
+ 'live.g1':'خزمەتگوزارییەک لە ئەپەکە هەڵبژێرە','live.g2':'داواکاری پێشکەش بکە و باج بدە','live.g3':'لە داشبۆردەوە پەسەندی بکە و مۆبایل ببینە',
+ 'live.sync':'هاوکات دەستبەجێ','live.reset':'↺ ڕێکخستنەوەی دیمۆ','live.phoneCap':'ئەپی هاوڵاتی (مینی ئەپ)','live.phoneSub':'کلیک لە خزمەتگوزارییەکان و دوگمەکان بکە — هەموویان کار دەکەن',
+ 'live.dashCap':'داشبۆردی بەڕێوەبردنی وەزارەت','live.dashSub':'کلیک لە هەر داواکارییەک لە خشتەکە بکە بۆ پەسەندکردن و گواستنەوە بۆ قۆناغی داهاتوو',
+ 'calc.eyebrow':'ژمێرەری داهات و پاشەکەوت','calc.h2':'ژمارەکان بجوڵێنە… <span class="grad2">و کاریگەرییەکە لەسەر وەزارەت ببینە</span>',
+ 'calc.lead':'ژمارەکانی خوارەوە گریمانەیین و دەگۆڕدرێن. ژمارەی مامەڵەکان یان ڕێژەی گۆڕانی ئەلیکترۆنی یان بڕی کرێ بگۆڕە، ئەنجامەکان دەستبەجێ نوێ دەبنەوە.',
+ 'calc.in1':'ژمارەی مامەڵەی ساڵانە','calc.in2':'ڕێژەی گۆڕانی ئەلیکترۆنی %','calc.in3':'تێکڕای کرێی خزمەتگوزاری ئەلیکترۆنی (د.ع)','calc.in4':'تێکڕای باجی فەرمی (د.ع)',
+ 'calc.note':'• کرێی خزمەتگوزاری ئەلیکترۆنی بە ڕێککەوتن لەگەڵ وەزارەت دیاری دەکرێت.<br>• باجی فەرمی <b>100%</b> دەچێتە هەژماری وەزارەت.<br>• خزمەتگوزارییە کۆمەڵایەتییە بێبەرامبەرەکان بێبەرامبەر دەمێننەوە.<br>• تێچووی دروستکردن و کارپێکردن <b>سفر</b>ە لەسەر وەزارەت (مۆدێلی BOT).',
+ 'calc.o1':'داهاتی ساڵانەی کرێی خزمەتگوزاری ئەلیکترۆنی','calc.o2':'باجی فەرمی کۆکراوە بە ئەلیکترۆنی (100% بۆ وەزارەت)','calc.o3':'کاتژمێری کاری فەرمانبەران پاشەکەوتکراو لە ساڵێکدا (25 خولەک/مامەڵەی کاغەزی)','calc.o4':'سەردانی هاوڵاتیان پاشەکەوتکراو لە ساڵێکدا (3 سەردان/مامەڵە)',
+ 'calc.chT':'داهاتی مانگانە لە ساڵی یەکەمدا','calc.chS':'هێڵی بڵاوبوونەوەی بەرەبەرە: بە دوو خزمەتگوزاری دەست پێدەکات و لە مانگی حەوتەم دەگاتە توانای تەواو','calc.hrs':'کاتژمێر','calc.visits':'سەردان',
+ 'cmp.eyebrow':'پێش / پاش','cmp.h2':'گەشتی هاوڵاتییەک داوای یارمەتی پاراستنی کۆمەڵایەتی دەکات… <span class="grad">ئەمڕۆ بەرامبەر تەمکین</span>',
+ 'cmp.lead':'هەمان خزمەتگوزاری، هەمان لیژنەکان، هەمان بڕیاری کۆتایی بە دەستی وەزارەت — جیاوازییەکە لە ڕێگاکەدایە کە هاوڵاتی و فەرمانبەر دەیبڕن.',
+ 'cmp.today':'ئەمڕۆ (کاغەزی)','cmp.tamkeen':'تەمکین (ئەلیکترۆنی)','cmp.ribbon':'لەگەڵ تەمکین',
+ 'cmp.tc1':'5 سەردان','cmp.tc2':'+12 ڕۆژ','cmp.tc3':'4 کۆپی کاغەز','cmp.tc4':'ڕیزی چاوەڕوانی',
+ 'cmp.kc1':'0 سەردان','cmp.kc2':'6 ڕۆژ','cmp.kc3':'بارکردن لە مۆبایلەوە','cmp.kc4':'بەدواداچوونی دەستبەجێ',
+ 'cmp.t1':'سەردانی یەکەم بۆ پرسیار','cmp.t1s':'زانینی کاغەزە پێویستەکان بە زارەکی','cmp.t2':'کۆپیکردنی بەڵگەنامەکان','cmp.t2s':'4 کۆپی لە کارت و نیشتەجێبوون و بەڵێننامە',
+ 'cmp.t3':'سەردانی دووەم بۆ پێشکەشکردن','cmp.t3s':'ڕیز + وەرگرتنی پسوولەی کاغەزی','cmp.t4':'سەردانەکان بۆ بەدواداچوون','cmp.t4s':'"هەفتەی داهاتوو وەرەوە" × 2','cmp.t5':'زانینی ئەنجام','cmp.t5s':'لە تابلۆی ڕاگەیاندن یان بە تەلەفۆن ئەگەر بەخت یاری کرد',
+ 'cmp.k1':'کردنەوەی ئەپ و هەڵبژاردنی خزمەتگوزاری','cmp.k1s':'لیستی بەڵگەنامەکان پێشتر ڕوونە','cmp.k2':'وێنەگرتنی بەڵگەنامەکان بە کامێرا','cmp.k2s':'بارکردنی ڕاستەوخۆ، بێ کۆپی کاغەزی',
+ 'cmp.k3':'پشکنینی ئۆتۆماتیکی دەستبەجێ','cmp.k3s':'ژمارەی داواکاری و پسوولەی ئەلیکترۆنی لە چەند چرکەیەکدا','cmp.k4':'ئاگادارکردنەوە بە کاتی لێکۆڵینەوەی مەیدانی','cmp.k4s':'لێکۆڵەر دێتە ماڵەوە، هاوڵاتی ناچێتەوە',
+ 'cmp.k5':'بڕیاری لیژنە وەک ئاگادارکردنەوە دەگات','cmp.k5s':'و زیادکردن بۆ مووچە لە "داواکارییەکانم" دەردەکەوێت',
+ 'cmp.mT':'و لە لایەنی وەزارەتەوە','cmp.m1':'ئەرشیفکردن','cmp.m1o':'فایلی کاغەزی و کۆگا','cmp.m1n':'ئەرشیفی دیجیتاڵی گەڕانکراو','cmp.m2':'ڕاپۆرتەکان','cmp.m2o':'خشتەی دەستی کۆتایی مانگ','cmp.m2n':'داشبۆردی دەستبەجێ بۆ هەر بەڕێوەبەرایەتییەک','cmp.m3':'چاودێری','cmp.m3o':'نازانرێت داواکاری لەکوێ وەستاوە','cmp.m3n':'تۆماری وردبینی بۆ هەر هەنگاو و فەرمانبەرێک',
+ 'svc.eyebrow':'12 خزمەتگوزارییەکە','svc.h2':'کەتەلۆگی خزمەتگوزارییەکان بەپێی فەرمانگە… <span class="grad2">هەموویان لە داشبۆردەوە دروست دەکرێن بێ پرۆگرامسازی</span>',
+ 'svc.lead':'هەر خزمەتگوزارییەک بە هەمان توخمەکانی دروستکردن لەسەر تەمکین وەسف کراوە: فەرمانگەی بەرپرس + فۆرم + قۆناغەکان + باج. خزمەتگوزارییە بێبەرامبەرەکان بێبەرامبەر دەمێننەوە و باجە فەرمییەکان بە ئەلیکترۆنی بۆ هەژماری وەزارەت کۆدەکرێنەوە.',
+ 'svc.note':'* خانەکان و قۆناغەکان و باجەکان ڕوونکەرەوەن و لەسەر ڕێکارە ڕاگەیەنراوەکان بنیات نراون؛ بە کۆتایی لەگەڵ هەر فەرمانگەیەک لە قۆناغی شیکاریدا ڕێک دەخرێن.',
+ 'foot.1':'ئینجاز بۆ تەکنەلۆژیای زانیاری – بەغدا · پلاتفۆرمی تەمکین','foot.2':'دیمۆی تاقیکاری بۆ مەبەستی پێشکەشکردن · هەموو داتا و ژمارەکان گریمانەیین · لۆگۆی فەرمی لە کاتی پەسەندکردندا دەگۆڕدرێت'
+},
+en:{
+ brand:'Ministry of Labour & Social Affairs',brandSub:'Tamkeen platform demo · Enjaz',
+ 'nav.live':'Live demo','nav.calc':'Revenue calculator','nav.compare':'Before / After','nav.services':'Services',
+ 'hero.eyebrow':'Interactive live demo · Ministry of Labour & Social Affairs',
+ 'hero.h1':'Ministry services<br>submitted, paid and approved<br><span class="grad">right in front of you</span>',
+ 'hero.lead':'This page is not a slide deck; it is a working model of the <b style="color:#fff">Tamkeen</b> platform by Enjaz: submit a request from the citizen app, pay the fee electronically, then approve it from the ministry dashboard and watch the update reach the citizen instantly. No coding for each new service.',
+ 'hero.btn1':'Try the live demo','hero.btn2':'Revenue calculator',
+ 'hero.s1':'build cost to the ministry','hero.s2':'sample services across ministry departments','hero.s3':'of official fees go to the ministry account',
+ 'live.eyebrow':'Interactive live demo','live.h2':'The citizen submits… <span class="grad">the ministry approves… on the same screen</span>',
+ 'live.lead':'Everything here really runs inside the page: the phone is what the citizen sees, the dashboard is what the ministry employee sees. Submit a request from the phone and watch the dashboard update, then approve it from the dashboard and watch the phone receive the notification.',
+ 'live.g1':'Pick a service in the app','live.g2':'Submit the request and pay the fee','live.g3':'Approve it from the dashboard and watch the phone',
+ 'live.sync':'Synced in real time','live.reset':'↺ Reset demo','live.phoneCap':'Citizen app (mini-app)','live.phoneSub':'Tap services and buttons — everything works',
+ 'live.dashCap':'Ministry admin dashboard','live.dashSub':'Click any request row to approve and move it to the next stage',
+ 'calc.eyebrow':'Revenue & savings calculator','calc.h2':'Move the numbers… <span class="grad2">and see the impact on the ministry</span>',
+ 'calc.lead':'The figures below are editable assumptions. Change transaction volume, digital adoption or fee values and the results update instantly.',
+ 'calc.in1':'Annual transactions','calc.in2':'Digital adoption %','calc.in3':'Average e-service fee (IQD)','calc.in4':'Average official fee (IQD)',
+ 'calc.note':'• The e-service fee is set by agreement with the ministry.<br>• Official fees go <b>100%</b> to the ministry account.<br>• Free social services remain free.<br>• Build and operations cost to the ministry is <b>zero</b> (BOT model).',
+ 'calc.o1':'Annual e-service fee revenue','calc.o2':'Official fees collected electronically (100% to ministry)','calc.o3':'Staff hours saved per year (25 min per paper transaction)','calc.o4':'Citizen visits saved per year (3 visits per transaction)',
+ 'calc.chT':'Monthly revenue in year one','calc.chS':'Gradual rollout curve: starts with two services and reaches full capacity in month seven','calc.hrs':'hours','calc.visits':'visits',
+ 'cmp.eyebrow':'Before / After','cmp.h2':'A citizen applying for social protection allowance… <span class="grad">today vs. Tamkeen</span>',
+ 'cmp.lead':'Same service, same committees, same final decision by the ministry — the difference is the path the citizen and the employee travel.',
+ 'cmp.today':'Today (paper)','cmp.tamkeen':'Tamkeen (digital)','cmp.ribbon':'With Tamkeen',
+ 'cmp.tc1':'5 visits','cmp.tc2':'12+ days','cmp.tc3':'4 paper copies','cmp.tc4':'Waiting queues',
+ 'cmp.kc1':'0 visits','cmp.kc2':'6 days','cmp.kc3':'Upload from phone','cmp.kc4':'Real-time tracking',
+ 'cmp.t1':'First visit to ask','cmp.t1s':'Required documents explained verbally','cmp.t2':'Photocopying documents','cmp.t2s':'4 copies of ID, housing card and pledge',
+ 'cmp.t3':'Second visit to submit','cmp.t3s':'Queue + paper receipt','cmp.t4':'Follow-up visits','cmp.t4s':'"Come back next week" × 2','cmp.t5':'Learning the result','cmp.t5s':'From a notice board, or by phone if lucky',
+ 'cmp.k1':'Open the app and pick the service','cmp.k1s':'Document checklist is clear upfront','cmp.k2':'Photograph documents with the camera','cmp.k2s':'Direct upload, no paper copies',
+ 'cmp.k3':'Instant automated verification','cmp.k3s':'Request number and e-receipt within seconds','cmp.k4':'Notification of field visit date','cmp.k4s':'The researcher comes to the home; no trips',
+ 'cmp.k5':'Committee decision arrives as a notification','cmp.k5s':'Payroll enrolment appears in "My requests"',
+ 'cmp.mT':'And on the ministry side','cmp.m1':'Archiving','cmp.m1o':'Paper files and storerooms','cmp.m1n':'Searchable digital archive','cmp.m2':'Reporting','cmp.m2o':'Manual month-end spreadsheets','cmp.m2n':'Live dashboard per directorate','cmp.m3':'Oversight','cmp.m3o':'Nobody knows where a request stalled','cmp.m3n':'Audit log for every step and employee',
+ 'svc.eyebrow':'The 12 services','svc.h2':'Service catalogue by department… <span class="grad2">all built from the dashboard, no coding</span>',
+ 'svc.lead':'Each service is described with the same Tamkeen building blocks: responsible department + form + stages + fees. Free services stay free; official fees are collected electronically to the ministry account. (Catalogue content shown in Arabic.)',
+ 'svc.note':'* Fields, stages and fees are illustrative and based on published procedures; they are finalised with each department during the analysis phase.',
+ 'foot.1':'Enjaz Information Technology – Baghdad · Tamkeen platform','foot.2':'Demo for presentation purposes · all data and figures are fictitious · official logo to be replaced upon approval'
+}};
+const DEF={}; document.querySelectorAll('[data-i18n]').forEach(el=>DEF[el.dataset.i18n]=el.innerHTML);
+function T(k){return (I18N[LANG]&&I18N[LANG][k])||I18N.ar[k]||DEF[k]||k}
+function setLang(l){
+  LANG=l; try{localStorage.setItem('tamkeen-lang',l)}catch(e){}
+  document.documentElement.lang=l; document.documentElement.dir=l==='en'?'ltr':'rtl';
+  document.querySelectorAll('[data-i18n]').forEach(el=>{const k=el.dataset.i18n;el.innerHTML=(I18N[l]&&I18N[l][k])||DEF[k];});
+  document.querySelectorAll('#lang button').forEach(b=>b.classList.toggle('on',b.dataset.lang===l));
+  document.title=l==='en'?'Live demo – Tamkeen | Ministry of Labour & Social Affairs – Enjaz':(l==='ku'?'دیمۆی زیندوو – تەمکین | وەزارەتی کار و کاروباری کۆمەڵایەتی':'ديمو حي – تمكين | وزارة العمل والشؤون الاجتماعية – إنجاز');
+  calc();
+}
+$('#lang').addEventListener('click',e=>{const b=e.target.closest('button');if(b) setLang(b.dataset.lang);});
+let saved='ar'; try{saved=localStorage.getItem('tamkeen-lang')||'ar'}catch(e){}
+if(!I18N[saved]) saved='ar';
+
+/* ================= REVEAL / BOOT ================= */
+const isStatic=location.search.includes('static');
+if(isStatic) document.body.classList.add('static');
+const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.12});
+if(!isStatic) document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+render(); renderAdmin(); setLang(saved);
+window.TAMKEEN={state:()=>S,submit,advance,setLang,go,calc};
+})();
+</script>
+</body>
+</html>
