@@ -386,6 +386,104 @@ nav ul{margin-inline-start:auto}
 .fbrand img{height:40px}.fbrand .ez{background:#fff;border-radius:10px;padding:5px 9px;height:42px}
 .fbrand span{color:var(--muted);font-size:18px}
 @media(max-width:900px){.enjaz{display:none}}
+/* ===== ERP + ARCHIVE MOCK WINDOWS ===== */
+.erp-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin:26px 0 40px;align-items:start}
+.erp-grid>*{min-width:0}
+.dash.erp{display:grid;grid-template-columns:120px 1fr;gap:10px;min-height:470px;align-content:start}
+.dash.erp .dh{grid-column:1/-1;margin-bottom:0}
+.side{background:#fff;border-radius:12px;padding:8px;box-shadow:0 2px 8px rgba(0,0,0,.04);align-self:start}
+.side div{padding:8px 9px;border-radius:8px;font-size:10.5px;font-weight:700;color:#5c6677;cursor:pointer;display:flex;gap:7px;align-items:center;transition:.2s}
+.side div:hover{background:#f4f6fa}.side div.on{background:#0f7a5a;color:#fff}
+.side div i{font-style:normal;font-size:13px}
+.erp-c{min-width:0}
+.dash.erp .tbl{min-width:0;font-size:9px}.dash.erp .tbl th,.dash.erp .tbl td{padding:6px 5px}.dash.erp .tbl td.el{max-width:86px;overflow:hidden;text-overflow:ellipsis}.dash.erp .tbl td.el2{max-width:70px;overflow:hidden;text-overflow:ellipsis}.dash.erp .kpi{display:block;padding:8px 10px}.dash.erp .kpi span{display:block}.dash.erp .kpi b{font-size:14px;margin:2px 0}.dash.erp .kpi small{font-size:8px;color:#8a94a6;display:block}.dash.erp .pill{font-size:8px;padding:2px 6px}.dash.erp .tbl td:last-child .pill{white-space:normal;display:inline-block;line-height:1.3;text-align:center}
+.erp-c h6{font-size:12px;font-weight:900;margin-bottom:8px;display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
+.mform{background:#fff;border-radius:12px;padding:10px;box-shadow:0 2px 8px rgba(0,0,0,.04);margin-bottom:10px;display:grid;grid-template-columns:1fr 1fr 1fr auto;gap:8px;align-items:end;animation:popin .4s}
+.mform label{font-size:9px;color:#5c6677;font-weight:700;display:block;margin-bottom:3px}
+.mform input,.mform select{width:100%;font-family:inherit;font-size:10px;padding:7px 8px;border-radius:8px;border:1px solid #e3e7ee;background:#fff;color:#1b2430;outline:none}
+.mform input:focus,.mform select:focus{border-color:#0f7a5a}
+.route{display:flex;align-items:center;gap:6px;margin-top:8px;font-size:9.5px;color:#5c6677;flex-wrap:wrap}
+.route span{background:#fff;border:1px solid #e3e7ee;border-radius:999px;padding:3px 9px;font-weight:700}
+.route span.ok{background:#e6f4ec;border-color:#b7e2cb;color:#2f7a52}
+.route span.cur{background:#fff3d6;border-color:#f5d48a;color:#9a6700}
+.route i{font-style:normal;color:#b9c3d3}
+.pbar{height:8px;background:#e3e7ee;border-radius:99px;overflow:hidden;margin:8px 0}
+.pbar i{display:block;height:100%;background:linear-gradient(90deg,#0f7a5a,#4ad1a4);width:0;transition:width .25s}
+.tot{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:8px}
+.tot div{background:#f8fafc;border-radius:10px;padding:8px 10px;font-size:9px;color:#5c6677}
+.tot div b{display:block;font-size:11.5px;color:#1b2430;white-space:nowrap}
+.fbars .r{display:flex;align-items:center;gap:8px;margin:7px 0;font-size:9.5px}
+.fbars .r span{flex:none;width:118px}
+.fbars .r div{flex:1;height:9px;background:#eef1f6;border-radius:99px;overflow:hidden;position:relative}
+.fbars .r div i{display:block;height:100%;border-radius:99px;background:#8b5cf6}
+.fbars .r div i.s{position:absolute;top:0;right:0;background:#0f7a5a;opacity:.85}
+.fbars .r em{font-style:normal;flex:none;width:44px;text-align:left;color:#5c6677;direction:ltr}
+.rev-line{background:#e6f4ec;border:1px solid #b7e2cb;border-radius:10px;padding:8px 11px;font-size:10px;color:#2f7a52;display:flex;justify-content:space-between;align-items:center;margin-top:10px;font-weight:700}
+.rev-line b{font-size:12px;white-space:nowrap}
+.cmt{background:#fff;border-radius:12px;padding:10px 12px;margin-bottom:7px;box-shadow:0 2px 8px rgba(0,0,0,.04);cursor:pointer;display:flex;gap:10px;align-items:center;border:1px solid transparent}
+.cmt:hover{border-color:#cfe6dc}.cmt.on{border-color:#0f7a5a;background:#f0faf5}
+.cmt i{width:30px;height:30px;border-radius:9px;background:#f4f6fa;display:grid;place-items:center;font-style:normal;flex:none}
+.cmt b{font-size:10.5px;display:block}.cmt span{font-size:8.5px;color:#8a94a6}
+.cmt em{margin-inline-start:auto;font-style:normal;text-align:center;font-size:8.5px;color:#9a6700;background:#fff3d6;border-radius:8px;padding:3px 8px;white-space:nowrap}
+.agenda{background:#fff;border-radius:12px;padding:10px 12px;box-shadow:0 2px 8px rgba(0,0,0,.04);animation:popin .4s}
+.agenda label{display:flex;gap:8px;align-items:center;font-size:10px;padding:6px 0;border-bottom:1px solid #f0f2f6;cursor:pointer}
+.agenda label:last-of-type{border:0}
+.agenda input{accent-color:#0f7a5a}
+.agenda label.done span{text-decoration:line-through;color:#9aa3b5}
+.scards{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.scards div{background:#fff;border-radius:12px;padding:10px 12px;box-shadow:0 2px 8px rgba(0,0,0,.04)}
+.scards div i{font-style:normal;font-size:18px;display:block;margin-bottom:4px}
+.scards div b{font-size:12.5px;display:block}.scards div span{font-size:9px;color:#7b8597}
+/* archive */
+.dash.arc{min-height:470px}
+.srch{display:flex;gap:8px;align-items:center;background:#fff;border-radius:12px;padding:6px 8px 6px 12px;box-shadow:0 2px 8px rgba(0,0,0,.04);border:1px solid #e3e7ee}
+.srch input{flex:1;border:0;outline:none;font-family:inherit;font-size:11px;color:#1b2430;background:transparent;min-width:0}
+.srch button{background:#0f7a5a;color:#fff;border:0;border-radius:9px;padding:7px 12px;font-family:inherit;font-weight:800;font-size:10px;cursor:pointer}
+.sugg{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0 10px;font-size:9px;color:#7b8597;align-items:center}
+.sugg span{background:#fff;border:1px solid #e3e7ee;border-radius:999px;padding:3px 9px;cursor:pointer;font-weight:700;color:#2355b8;direction:ltr}
+.sugg span:hover{border-color:#2355b8}
+.arc-empty{text-align:center;color:#8a94a6;font-size:10px;padding:60px 10px}
+.arc-empty i{font-style:normal;font-size:40px;display:block;margin-bottom:8px}
+.fhead{background:#fff;border-radius:12px;padding:10px 12px;box-shadow:0 2px 8px rgba(0,0,0,.04);display:flex;gap:10px;align-items:center;margin-bottom:10px;animation:popin .4s}
+.fhead .av{width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,#0f7a5a,#22d3ee);color:#fff;display:grid;place-items:center;font-size:18px;flex:none}
+.fhead b{font-size:12px;display:block}.fhead small{font-size:9px;color:#7b8597;display:block}
+.fhead .tags{margin-inline-start:auto;display:flex;gap:5px;flex-wrap:wrap;justify-content:flex-end}
+.arc-body{display:grid;grid-template-columns:1fr 128px;gap:10px}
+.tree{background:#fff;border-radius:12px;padding:8px;box-shadow:0 2px 8px rgba(0,0,0,.04);align-self:start}
+.tree b{font-size:9.5px;color:#5c6677;display:block;margin:2px 4px 6px}
+.tree div{font-size:9.5px;padding:6px 7px;border-radius:7px;cursor:pointer;display:flex;gap:5px;align-items:center;color:#1b2430}
+.tree div em{font-style:normal;margin-inline-start:auto;background:#f4f6fa;border-radius:6px;padding:0 5px;font-size:8.5px;color:#7b8597}
+.tree div:hover{background:#f4f6fa}.tree div.on{background:#e6f4ec;color:#0f7a5a;font-weight:700}
+.docs{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.doc{background:#fff;border-radius:10px;padding:6px;box-shadow:0 2px 8px rgba(0,0,0,.04);cursor:pointer;transition:.2s;border:1px solid transparent}
+.doc:hover{transform:translateY(-2px);border-color:#cfe6dc}
+.doc.on{border-color:#0f7a5a}
+.th{aspect-ratio:3/4;border-radius:6px;position:relative;overflow:hidden;background:#fff;border:1px solid #e3e7ee}
+.th.scan{background:repeating-linear-gradient(180deg,#fff 0 7px,#e9edf3 7px 8px) ,#fff;background-size:100% 8px;background-position:0 14px}
+.th.scan::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#fff 0 12px,transparent 12px),linear-gradient(90deg,#fff 0 10px,transparent 10px calc(100% - 10px),#fff calc(100% - 10px))}
+.th.scan::after{content:"";position:absolute;width:26px;height:26px;border:2px solid rgba(180,40,40,.55);border-radius:50%;bottom:8px;left:8px;transform:rotate(-14deg);box-shadow:inset 0 0 0 2px #fff,inset 0 0 0 3px rgba(180,40,40,.35)}
+.th.scan.new{filter:sepia(.25)}
+.th.pdf{display:grid;place-items:center;background:#f8fafc}
+.th.pdf i{font-style:normal;width:30px;height:38px;background:#e5484d;border-radius:4px;color:#fff;font-size:8px;font-weight:900;display:grid;place-items:center;position:relative}
+.th.pdf i::after{content:"";position:absolute;top:0;right:0;border:6px solid #fff;border-left-color:transparent;border-bottom-color:transparent}
+.th.pdf.live{background:#eaf7f0}
+.th .ocr{position:absolute;top:4px;right:4px;background:#0f7a5a;color:#fff;font-size:7px;font-weight:900;padding:1px 5px;border-radius:5px;font-style:normal;z-index:1}
+.th .yr{position:absolute;bottom:4px;right:4px;background:rgba(27,36,48,.75);color:#fff;font-size:7.5px;padding:1px 5px;border-radius:5px}
+.doc b{display:block;font-size:8.5px;margin-top:5px;line-height:1.3;height:22px;overflow:hidden}
+.doc span{font-size:7.5px;color:#8a94a6}
+.prev{background:#fff;border-radius:12px;padding:10px;box-shadow:0 2px 8px rgba(0,0,0,.04);display:grid;grid-template-columns:90px 1fr;gap:10px;margin-top:10px;animation:popin .4s;border:1px solid #cfe6dc}
+.prev .th{width:90px}
+.prev h6{font-size:11px;font-weight:900;display:flex;justify-content:space-between;align-items:center;margin-bottom:4px}
+.prev h6 i{font-style:normal;cursor:pointer;color:#9aa3b5;font-size:14px;padding:0 4px}
+.prev .kv{display:flex;justify-content:space-between;font-size:9px;padding:3px 0;border-bottom:1px solid #f0f2f6}
+.prev .kv span{color:#8a94a6}
+.arc-tl{display:flex;gap:4px;margin-top:10px;background:#fff;border-radius:12px;padding:10px 8px 8px;box-shadow:0 2px 8px rgba(0,0,0,.04)}
+.arc-tl div{flex:1;text-align:center;font-size:8.5px;color:#5c6677;position:relative;padding-top:16px;line-height:1.3}
+.arc-tl div::before{content:"";position:absolute;top:4px;left:0;right:0;height:4px;background:#0f7a5a;border-radius:99px}
+.arc-tl div:nth-child(1)::before{background:#9aa3b5}.arc-tl div:nth-child(2)::before{background:#8b5cf6}.arc-tl div:nth-child(3)::before{background:#f5b942}
+.arc-tl div b{display:block;color:#1b2430;font-size:9.5px}
+@media(max-width:960px){.erp-grid{grid-template-columns:1fr}}
+@media(max-width:600px){.dash.erp{grid-template-columns:1fr}.side{display:flex;flex-wrap:wrap;gap:3px}.side div{padding:6px 8px;font-size:9.5px}.mform{grid-template-columns:1fr 1fr}.arc-body{grid-template-columns:1fr}.tree{order:-1}.docs{grid-template-columns:repeat(3,1fr)}.fbars .r span{width:80px}}
 </style>
 </head>
 <body>
@@ -612,6 +710,26 @@ nav ul{margin-inline-start:auto}
       <div class="fb f2"><small>2 · للموظف والإدارة</small><h3>منظومة إدارة الموارد ERP</h3><p>الموارد البشرية والرواتب، المالية والموازنة، المراسلات، اللجان، المخازن — كل الدوائر على نظام واحد يتكلم مع بعضه.</p><div class="chips"><span class="chip">صادر ووارد</span><span class="chip">رواتب</span><span class="chip">موازنة</span><span class="chip">لجان</span></div></div>
       <div class="fa">←</div>
       <div class="fb f3"><small>3 · ذاكرة الوزارة</small><h3>الأرشفة والوثائق الإلكترونية</h3><p>مسح الملفات القديمة وفهرستها، وأرشفة تلقائية لكل طلب جديد — ملف موحد لكل مستفيد قابل للبحث بثوانٍ.</p><div class="chips"><span class="chip">OCR عربي</span><span class="chip">ملف موحد</span><span class="chip">بحث فوري</span></div></div>
+    </div>
+
+
+    <div class="guide reveal d3" style="margin-top:0">
+      <ol>
+        <li><i>1</i><span>سجّل كتاباً وارداً في الـERP</span></li>
+        <li><i>2</i><span>احتسب رواتب الشهر</span></li>
+        <li><i>3</i><span>ابحث عن مستفيد في الأرشيف</span></li>
+      </ol>
+      <span class="sync">نماذج تفاعلية · بيانات افتراضية</span>
+    </div>
+    <div class="erp-grid">
+      <div class="live-col reveal d1" style="align-items:stretch">
+        <div class="laptop"><div class="bar"><i></i><i></i><i></i><span>erp.molsa.gov.iq</span></div><div class="dash erp" id="erpWin"></div></div>
+        <div class="cap"><b>نافذة ERP الوزارة</b><span>اختر وحدة من القائمة الجانبية — الصادر والوارد، الرواتب، الموازنة، اللجان</span></div>
+      </div>
+      <div class="live-col reveal d2" style="align-items:stretch">
+        <div class="laptop"><div class="bar"><i></i><i></i><i></i><span>archive.molsa.gov.iq</span></div><div class="dash arc" id="arcWin"></div></div>
+        <div class="cap"><b>نافذة الأرشيف الإلكتروني</b><span>ابحث عن مستفيد لفتح ملفه الموحد — الورقي الممسوح والإلكتروني معاً</span></div>
+      </div>
     </div>
 
     <h3 class="reveal" style="font-size:22px;margin:0 0 14px">وحدات الـERP المقترحة للوزارة</h3>
@@ -845,7 +963,7 @@ function submit(){
     S.reqs.unshift(r); S.curReq=r;
     S.kpi.today++; S.kpi.fees+=s.fee+s.efee; S.kpi.pending++;
     S.adminSel=r.id; S.newId=r.id; S.adminTab='dash';
-    go('success'); renderAdmin(true);
+    go('success'); renderAdmin(true); syncErp();
     setTimeout(()=>toast('تم استلام طلبك '+r.id,'سيتم إشعارك عند كل مرحلة'),500);
   },1600);
 }
@@ -909,14 +1027,14 @@ function advance(id){
   r.stage++; const st=s.stages[r.stage];
   r.log.push({t:now(),m:(isDone(r)?'إنجاز: ':'اعتماد ونقل إلى: ')+st,by:'م. مدير الوحدة'});
   if(isDone(r)){S.kpi.done++;S.kpi.pending=Math.max(0,S.kpi.pending-1);}
-  renderAdmin(isDone(r));
+  renderAdmin(isDone(r)); syncErp();
   if(!r.seed){
     if(S.view==='track'&&S.curReq&&S.curReq.id===r.id) render();
     else if(S.view==='reqs'||S.view==='home') render();
     toast(isDone(r)?'🎉 اكتمل طلبك '+r.id:'تحديث على طلبك '+r.id, isDone(r)?st:'انتقل الطلب إلى مرحلة: '+st);
   }
 }
-$('#resetBtn').addEventListener('click',()=>{initState();render();renderAdmin();});
+$('#resetBtn').addEventListener('click',()=>{initState();render();renderAdmin();A.sel=null;syncErp();});
 
 /* ================= CALCULATOR ================= */
 const ids=['Tx','Pct','Efee','Fee'];
@@ -1054,8 +1172,141 @@ if(isStatic) document.body.classList.add('static');
 const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.12});
 if(!isStatic) document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 
+/* ================= ERP + ARCHIVE MOCK ================= */
+const E={tab:'corr',form:false,letters:[
+  {no:'و/1452',from:'ديوان الرقابة المالية',sub:'طلب بيانات صرف إعانات الربع الثالث',to:'المالية والموازنة',st:'قيد الإجراء',p:'y'},
+  {no:'و/1451',from:'مجلس محافظة البصرة',sub:'ترشيح دورة تدريب مهني – 40 متدرباً',to:'دائرة التدريب المهني',p:'g',st:'منجز'},
+  {no:'و/1450',from:'الأمانة العامة لمجلس الوزراء',sub:'تعميم بشأن تحديث بيانات المستفيدين',to:'هيئة الحماية الاجتماعية',p:'b',st:'موجّه إلكترونياً'},
+  {no:'ص/0988',from:'إلى: وزارة المالية',sub:'كشف الإيرادات الإلكترونية لشهر آذار',to:'صادر',p:'g',st:'مُرسل'}],
+  newNo:1453,payP:0,payDone:false,cm:null,agenda:{}};
+const ERP_HDR=`<div class="dh"><img src="iraq_emblem.png" alt=""><div><b>منظومة إدارة الموارد – ERP</b><small>وزارة العمل والشؤون الاجتماعية · المقر العام</small></div><div class="usr"><i>م</i>مدير الديوان</div></div>`;
+const MODS=[['corr','📨','الصادر والوارد'],['hr','👥','الموارد البشرية والرواتب'],['fin','💵','المالية والموازنة'],['cmt','🏛️','اللجان'],['stk','📦','المخازن'],['rep','📊','التقارير']];
+const DEPTS=['هيئة الحماية الاجتماعية','دائرة العمل والتدريب المهني','دائرة التقاعد والضمان الاجتماعي','دائرة ذوي الإعاقة','دائرة رعاية المرأة','المالية والموازنة','الشؤون القانونية'];
+const CMTS=[
+  {n:'لجنة الشمول – بغداد الكرخ',d:'الأحد 12/4 · 10:00',k:14,a:['البت في 120 طلب شمول جديد (من تمكين)','مراجعة نتائج البحث الميداني – الزعفرانية','إيقاف مستفيدين متوفين وفق بيانات الأحوال','متابعة قرارات الجلسة السابقة']},
+  {n:'لجنة القروض الصغيرة – المركز',d:'الثلاثاء 14/4 · 11:30',k:6,a:['تدقيق 38 طلب قرض مشاريع صغيرة','موافقة على جدولة متعثرين','تقرير المصرف الصناعي']},
+  {n:'اللجنة الطبية – المعين المتفرغ',d:'الأربعاء 15/4 · 09:00',k:9,a:['فحص 60 حالة إعاقة شديدة','تجديد شهادات معين متفرغ','إحالة حالات للمستشفى التخصصي']},
+  {n:'لجنة المشتريات',d:'الخميس 16/4 · 12:00',k:3,a:['فتح عطاءات أجهزة مراكز التدريب','استلام مواد قرطاسية','تمديد عقد صيانة']}];
+function erpCorr(){
+  return `<h6><span>📨 سجل الوارد والصادر – ${today()}</span><button class="dbtn" data-eact="form" style="padding:6px 10px">＋ تسجيل كتاب وارد</button></h6>`+
+  (E.form?`<div class="mform"><div><label>الجهة المرسلة</label><input id="lFrom" placeholder="مثال: مجلس محافظة نينوى"></div><div><label>الموضوع</label><input id="lSub" placeholder="موضوع الكتاب"></div><div><label>التوجيه إلى</label><select id="lTo">${DEPTS.map(d=>`<option>${d}</option>`).join('')}</select></div><button class="dbtn" data-eact="addLetter" style="padding:7px 10px">تسجيل وتوجيه</button></div>`:'')+
+  `<div class="tbl-wrap"><table class="tbl"><thead><tr><th>رقم الكتاب</th><th>الجهة</th><th>الموضوع</th><th>التوجيه</th><th>الحالة</th></tr></thead><tbody>`+
+  E.letters.map((l,i)=>`<tr class="${l.fresh?'new':''}"><td style="direction:ltr;text-align:right">${esc(l.no)}${l.fresh?'<span class="badge-new">جديد</span>':''}</td><td class="el2" title="${esc(l.from)}">${esc(l.from)}</td><td class="el" title="${esc(l.sub)}">${esc(l.sub)}</td><td class="el2" title="${esc(l.to)}">${esc(l.to)}</td><td><span class="pill ${l.p}">${l.st}</span></td></tr>`).join('')+
+  `</tbody></table></div>`+
+  (E.letters[0].fresh?`<div class="route">مسار الكتاب ${esc(E.letters[0].no)}: <span class="ok">الديوان ✓</span><i>←</i><span class="ok">المدير العام ✓</span><i>←</i><span class="cur">${esc(E.letters[0].to)} · قيد الهامش</span><i>←</i><span>أرشفة تلقائية</span></div>`:
+  `<div class="hint">كل كتاب يُوجَّه إلكترونياً خلال دقائق ويُؤرشف تلقائياً بالملف المعني — لا مناولة ورقية.</div>`);
+}
+function erpHR(){
+  const p=E.payP;
+  return `<h6>👥 الموارد البشرية والرواتب</h6>
+  <div class="kpis" style="grid-template-columns:repeat(3,1fr)"><div class="kpi" style="--k:#2355b8"><span>الملاك الكلي</span><b>48,120</b><small>موظف في 18 محافظة</small></div><div class="kpi" style="--k:#f0b541"><span>إجازات اليوم</span><b>312</b><small>اعتيادية ومرضية</small></div><div class="kpi" style="--k:#0f7a5a"><span>رواتب الشهر</span><b style="font-size:12px">${E.payDone?'54.6 مليار':'—'}</b><small>${E.payDone?'محتسبة ✓':'لم تُحتسب بعد'}</small></div></div>
+  <div class="tbl-wrap"><table class="tbl"><thead><tr><th>الرقم الوظيفي</th><th>الاسم</th><th>الدائرة</th><th>الدرجة</th><th>الحالة</th></tr></thead><tbody>
+  <tr><td>10021</td><td>أحمد كريم جاسم</td><td class="el2">الحماية الاجتماعية</td><td>5/2</td><td><span class="pill g">على الملاك</span></td></tr>
+  <tr><td>10377</td><td>زينب علي حسن</td><td>التدريب المهني</td><td>6/1</td><td><span class="pill y">إجازة أمومة</span></td></tr>
+  <tr><td>11840</td><td>سعد محمد عبد</td><td class="el2">التقاعد والضمان</td><td>4/3</td><td><span class="pill g">على الملاك</span></td></tr>
+  <tr><td>12205</td><td>نور صباح خليل</td><td>ذوي الإعاقة</td><td>7/2</td><td><span class="pill b">قيد الترفيع</span></td></tr></tbody></table></div>
+  <div style="margin-top:10px;display:flex;align-items:center;gap:10px;flex-wrap:wrap"><button class="dbtn" data-eact="pay" ${p>0&&p<100?'disabled style="opacity:.6"':''}>${E.payDone?'↻ إعادة الاحتساب':'⚙️ احتساب رواتب الشهر'}</button><span style="font-size:9.5px;color:#5c6677">${p>0&&p<100?'جارٍ احتساب '+fmtN(481.2*p)+' موظف…':E.payDone?'اكتمل احتساب 48,120 راتباً خلال ثوانٍ ✓':'يحتسب كل الدوائر والمحافظات دفعة واحدة'}</span></div>
+  ${p>0?`<div class="pbar"><i style="width:${p}%"></i></div>`:''}
+  ${E.payDone?`<div class="tot"><div>إجمالي الرواتب<b>54,618,400,000 د.ع</b></div><div>الاستقطاعات (تقاعد+ضريبة)<b>6,912,300,000 د.ع</b></div><div>الصافي المحوّل للمصارف<b>47,706,100,000 د.ع</b></div></div>`:''}`;
+}
+function erpFin(){
+  const rows=[['الحماية الاجتماعية',92,78],['العمل والتدريب المهني',60,41],['التقاعد والضمان',48,30],['ذوي الإعاقة',40,26],['رعاية المرأة',22,15],['الإدارة والديوان',30,19]];
+  return `<h6>💵 المالية والموازنة – تنفيذ الموازنة ${new Date().getFullYear()}</h6>
+  <div style="background:#fff;border-radius:12px;padding:10px 12px;box-shadow:0 2px 8px rgba(0,0,0,.04)" class="fbars">
+  <div style="display:flex;gap:12px;font-size:8.5px;color:#7b8597;margin-bottom:2px"><span><i style="display:inline-block;width:8px;height:8px;background:#8b5cf6;border-radius:2px"></i> المخصص</span><span><i style="display:inline-block;width:8px;height:8px;background:#0f7a5a;border-radius:2px"></i> المصروف الفعلي</span></div>
+  ${rows.map(r=>`<div class="r"><span>${r[0]}</span><div><i style="width:${r[1]}%"></i><i class="s" style="width:${r[2]}%"></i></div><em>${Math.round(r[2]/r[1]*100)}%</em></div>`).join('')}
+  <div style="font-size:8.5px;color:#9aa3b5;margin-top:4px">الأرقام نسبية لأغراض العرض</div></div>
+  <div class="rev-line"><span>💳 إيرادات تمكين الإلكترونية اليوم – مقيّدة تلقائياً في حساب الوزارة</span><b>${money(S.kpi.fees)}</b></div>
+  <div class="hint">يتغير هذا الرقم لحظياً مع كل دفع في الديمو الحي أعلاه — بلا إدخال يدوي ولا قوائم ورقية.</div>`;
+}
+function erpCmt(){
+  return `<h6>🏛️ اللجان والقرارات</h6><div style="display:grid;grid-template-columns:${E.cm!==null?'1fr 1fr':'1fr'};gap:10px">
+  <div>${CMTS.map((c,i)=>`<div class="cmt ${E.cm===i?'on':''}" data-ecm="${i}"><i>🏛️</i><div><b>${c.n}</b><span>الاجتماع القادم: ${c.d}</span></div><em>${c.k} قرار<br>قيد التنفيذ</em></div>`).join('')}</div>
+  ${E.cm!==null?`<div class="agenda"><b style="font-size:10.5px;display:block;margin-bottom:4px">جدول أعمال – ${CMTS[E.cm].n}</b>${CMTS[E.cm].a.map((a,j)=>{const k=E.cm+'-'+j;const on=!!E.agenda[k];return `<label class="${on?'done':''}"><input type="checkbox" data-eag="${k}" ${on?'checked':''}><span>${a}</span></label>`}).join('')}<div class="hint" style="margin-top:6px">تُحفظ المحاضر والقرارات تلقائياً وتُربط بملفات المستفيدين في الأرشيف.</div></div>`:''}</div>`;
+}
+function erpStatic(t){
+  if(t==='stk') return `<h6>📦 المخازن والأصول</h6><div class="scards"><div><i>🏬</i><b>14</b><span>مخزن مركزي وفرعي</span></div><div><i>🖥️</i><b>3,420</b><span>أصل ثابت مُرمّز</span></div><div><i>📥</i><b>27</b><span>مستند إدخال هذا الأسبوع</span></div><div><i>⚠️</i><b>5</b><span>أصناف دون حد الطلب</span></div></div><div class="hint">جرد سنوي بالباركود، إهلاك تلقائي، وربط مباشر مع المشتريات والمالية.</div>`;
+  return `<h6>📊 التقارير ولوحة الوزير</h6><div class="scards"><div><i>📈</i><b>1,248</b><span>طلب إلكتروني هذا الأسبوع</span></div><div><i>⏱️</i><b>4.1 يوم</b><span>متوسط زمن الإنجاز</span></div><div><i>🗺️</i><b>18</b><span>محافظة على النظام</span></div><div><i>🧾</i><b>100%</b><span>رسوم مقيّدة إلكترونياً</span></div></div><div class="hint">تقرير موحد عبر الخدمات والـERP والأرشيف — بضغطة زر وبلا جمع يدوي من الدوائر.</div>`;
+}
+function renderErp(){
+  const w=$('#erpWin'); if(!w) return;
+  const body={corr:erpCorr,hr:erpHR,fin:erpFin,cmt:erpCmt}[E.tab]||(()=>erpStatic(E.tab));
+  w.innerHTML=ERP_HDR+`<div class="side">${MODS.map(m=>`<div class="${E.tab===m[0]?'on':''}" data-emod="${m[0]}"><i>${m[1]}</i>${m[2]}</div>`).join('')}</div><div class="erp-c">${body()}</div>`;
+}
+$('#erpWin').addEventListener('click',e=>{
+  const t=e.target.closest('[data-emod],[data-eact],[data-ecm]'); if(!t) return;
+  if(t.dataset.emod){E.tab=t.dataset.emod;E.form=false;renderErp();return;}
+  if(t.dataset.ecm){E.cm=E.cm===+t.dataset.ecm?null:+t.dataset.ecm;renderErp();return;}
+  const a=t.dataset.eact;
+  if(a==='form'){E.form=!E.form;renderErp();if(E.form)$('#lFrom').focus();}
+  else if(a==='addLetter'){
+    const from=($('#lFrom').value||'').trim()||'مجلس محافظة نينوى', sub=($('#lSub').value||'').trim()||'طلب شمول 85 عائلة نازحة بالإعانة', to=$('#lTo').value;
+    E.letters.forEach(l=>l.fresh=false);
+    E.letters.unshift({no:'و/'+(E.newNo++),from,sub,to,st:'موجّه إلكترونياً',p:'b',fresh:true});
+    E.form=false;renderErp();
+  }
+  else if(a==='pay'){
+    if(E.payP>0&&E.payP<100) return;
+    E.payP=1;E.payDone=false;renderErp();
+    const tick=()=>{E.payP=Math.min(100,E.payP+Math.ceil(Math.random()*14));const bar=$('#erpWin .pbar i');if(bar)bar.style.width=E.payP+'%';
+      if(E.payP>=100){E.payDone=true;renderErp();}else{renderErp();setTimeout(tick,120);}};
+    setTimeout(tick,150);
+  }
+});
+$('#erpWin').addEventListener('change',e=>{if(e.target.dataset.eag){E.agenda[e.target.dataset.eag]=e.target.checked;renderErp();}});
+
+/* ---- archive ---- */
+const A={q:'',open:false,folder:'all',sel:null};
+const BEN={name:'حيدر كاظم جواد',id:'198765432101',ben:'BN-2012-04418',gov:'بغداد – الكرخ',since:2012,res:'الباحثة الاجتماعية: سهى عبد الأمير'};
+const FOLD=[['all','📁','الملف الكامل'],['paper','🗄️','الملف الورقي الممسوح 2012–2019'],['tam','📱','طلبات تمكين الإلكترونية'],['cmt','🏛️','قرارات اللجان'],['pay','💵','الرواتب والصرف'],['corr','📨','المراسلات']];
+const ADOCS=[
+  {f:'paper',t:'استمارة الشمول الأصلية',y:2012,k:'scan',src:'قسم الحماية – الكرخ',idx:'شمول/2012/04418',res:'مسح 2019 · OCR 98%'},
+  {f:'paper',t:'البحث الاجتماعي الميداني',y:2012,k:'scan',src:'باحث ميداني',idx:'بحث/2012/1120',res:'مسح 2019 · OCR 96%'},
+  {f:'paper',t:'صورة البطاقة التموينية',y:2013,k:'scan',src:'المستفيد',idx:'هوية/2013/04418',res:'مسح 2019 · OCR 91%'},
+  {f:'cmt',t:'قرار لجنة الشمول – إدراج',y:2012,k:'scan',src:'لجنة الشمول الكرخ',idx:'قرار/2012/331',res:'مسح 2019 · OCR 97%'},
+  {f:'paper',t:'تحديث بيانات ورقي',y:2017,k:'scan',src:'قسم الحماية – الكرخ',idx:'تحديث/2017/0890',res:'مسح 2019 · OCR 95%'},
+  {f:'corr',t:'كتاب تأييد استمرار الإعانة',y:2019,k:'pdf',src:'الديوان – الصادر',idx:'ص/2019/4471',res:'إلكتروني أصلي'},
+  {f:'pay',t:'كشف الصرف السنوي',y:2025,k:'pdf',src:'ERP – الرواتب',idx:'صرف/2025/04418',res:'مولَّد آلياً من ERP'},
+  {f:'cmt',t:'محضر لجنة – تجديد الشمول',y:2025,k:'pdf',src:'ERP – اللجان',idx:'محضر/2025/118',res:'إلكتروني أصلي'}];
+function arcDocs(){
+  const live=S.reqs.filter(r=>!r.seed).map(r=>({f:'tam',t:svcOf(r.svc).name+' – '+r.id,y:new Date().getFullYear(),k:'pdf',live:true,src:'تطبيق تمكين · '+r.id,idx:'تمكين/'+r.id,res:svcOf(r.svc).stages[r.stage]+(isDone(r)?' ✓':''),id:r.id}));
+  const auto=live.filter(r=>/راتب|رواتب|إدراج/.test(r.res)).map(r=>({f:'pay',t:'أمر صرف – '+r.id,y:r.y,k:'pdf',live:true,src:'ERP – الرواتب (تلقائي)',idx:'صرف/'+r.id,res:'مولَّد آلياً بعد الاعتماد',id:r.id+'-p'}));
+  return ADOCS.concat(live,auto);
+}
+function renderArc(){
+  const w=$('#arcWin'); if(!w) return;
+  const hdr=`<div class="dh"><img src="iraq_emblem.png" alt=""><div><b>الأرشيف الإلكتروني – ملف المستفيد الموحد</b><small>نظام إدارة الوثائق · OCR عربي · بحث فوري</small></div><div class="usr"><i>س</i>باحثة اجتماعية</div></div>
+  <div class="srch">🔍<input id="arcQ" placeholder="ابحث برقم البطاقة الوطنية أو رقم المستفيد" value="${esc(A.q)}"><button data-aact="go">بحث</button></div>
+  <div class="sugg">جرّب: <span data-asug="198765432101">198765432101</span><span data-asug="BN-2012-04418">BN-2012-04418</span></div>`;
+  if(!A.open){w.innerHTML=hdr+`<div class="arc-empty"><i>🗂️</i>اكتب رقماً أو اختر اقتراحاً لفتح ملف المستفيد الموحد<br><small>2.4 مليون ملف مفهرس · زمن البحث أقل من ثانية</small></div>`;return;}
+  const docs=arcDocs(); const shown=docs.filter(d=>A.folder==='all'||d.f===A.folder);
+  const cnt=f=>f==='all'?docs.length:docs.filter(d=>d.f===f).length;
+  const sel=A.sel!==null?docs.find(d=>(d.id||d.idx)===A.sel):null;
+  const th=d=>d.k==='scan'?`<div class="th scan ${d.y<2015?'new':''}"><i class="ocr">OCR</i><span class="yr">${d.y}</span></div>`:`<div class="th pdf ${d.live?'live':''}"><i>PDF</i><span class="yr">${d.y}</span></div>`;
+  w.innerHTML=hdr+`<div class="fhead"><div class="av">👤</div><div><b>${BEN.name}</b><small>رقم المستفيد ${BEN.ben} · البطاقة الوطنية ${BEN.id}</small></div><div class="tags"><span class="pill g">مشمول منذ ${BEN.since}</span><span class="pill b">${BEN.gov}</span><span class="pill y">${docs.length} وثيقة</span></div></div>
+  <div class="arc-body"><div>
+    <div class="docs">${shown.map(d=>`<div class="doc ${sel&&(d.id||d.idx)===A.sel?'on':''}" data-adoc="${esc(d.id||d.idx)}">${th(d)}<b>${esc(d.t)}</b><span>${esc(d.src)}</span></div>`).join('')||'<div class="arc-empty" style="padding:30px">لا وثائق في هذا المجلد بعد</div>'}</div>
+    ${sel?`<div class="prev">${th(sel)}<div><h6><span>${esc(sel.t)}</span><i data-aact="close">✕</i></h6><div class="kv"><span>التاريخ</span><b>${sel.y}</b></div><div class="kv"><span>المصدر</span><b>${esc(sel.src)}</b></div><div class="kv"><span>الفهرسة</span><b style="direction:ltr">${esc(sel.idx)}</b></div><div class="kv"><span>${sel.k==='scan'?'المسح والتدقيق':'الحالة'}</span><b>${esc(sel.res)}</b></div><div class="kv"><span>الباحث</span><b>${BEN.res}</b></div></div></div>`:''}
+  </div>
+  <div class="tree"><b>مجلدات الملف</b>${FOLD.map(f=>`<div class="${A.folder===f[0]?'on':''}" data-afold="${f[0]}">${f[1]} ${f[2]}<em>${cnt(f[0])}</em></div>`).join('')}</div></div>
+  <div class="arc-tl"><div><b>2012</b>شمول ورقي</div><div><b>2019</b>مسح وفهرسة OCR</div><div><b>${new Date().getFullYear()}</b>تحديث بيانات عبر تمكين</div><div><b>${new Date().getFullYear()}</b>احتساب الراتب في ERP</div></div>`;
+}
+function arcOpen(q){A.q=q;A.open=!!q.trim();A.sel=null;A.folder='all';renderArc();}
+$('#arcWin').addEventListener('click',e=>{
+  const t=e.target.closest('[data-aact],[data-asug],[data-afold],[data-adoc]'); if(!t) return;
+  if(t.dataset.asug){arcOpen(t.dataset.asug);return;}
+  if(t.dataset.aact==='go'){arcOpen($('#arcQ').value);return;}
+  if(t.dataset.aact==='close'){A.sel=null;renderArc();return;}
+  if(t.dataset.afold){A.folder=t.dataset.afold;A.sel=null;renderArc();return;}
+  if(t.dataset.adoc){A.sel=A.sel===t.dataset.adoc?null:t.dataset.adoc;renderArc();}
+});
+$('#arcWin').addEventListener('input',e=>{if(e.target.id==='arcQ'){const v=e.target.value;A.q=v;if(v.trim().length>=3&&!A.open){A.open=true;A.folder='all';renderArc();const i=$('#arcQ');i.focus();i.setSelectionRange(v.length,v.length);}else if(!v.trim()&&A.open){A.open=false;renderArc();$('#arcQ').focus();}}});
+$('#arcWin').addEventListener('keydown',e=>{if(e.target.id==='arcQ'&&e.key==='Enter')arcOpen(e.target.value);});
+function syncErp(){if(E.tab==='fin')renderErp();if(A.open)renderArc();}
+renderErp(); renderArc();
+
 render(); renderAdmin(); setLang(saved);
-window.TAMKEEN={state:()=>S,submit,advance,setLang,go,calc};
+window.TAMKEEN={state:()=>S,submit,advance,setLang,go,calc,erp:E,arc:A,renderErp,renderArc};
 })();
 </script>
 </body>
